@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Sound Festival</title>
+  <meta name="description" content="Scopri il progetto creato per Open Sound Festival di Matera.">
+  <meta name="keywords"
+    content="Pixel Craft, case study, progetti creativi, branding, matera, festival, musica, identità visiva">
+  <meta name="author" content="Pixel Craft, Giulia Sacco">
+
+  <link rel="icon" href="img/pixelcraft_favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/case_musicsound.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- ===== GOOGLE FONT - Montserrat ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="fullwidth">
+    <a href="https://www.facebook.com/?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
+
+    <nav class="navbar">
+      <a href="home.html">
+        <img src="img/pixelcraft.png" alt="Logo" class="logo" aria-label="Vai alla homepage" >
+      </a>
+
+      <ul class="nav-links" aria-label="Menu di navigazione">
+        <li><a href="home.html" aria-label="Vai alla homepage">Home</a></li>
+        <li><a href="about.html" aria-label="Vai alla pagina about">About</a></li>
+        <li><a href="portfolio.html" class="active" aria-label="Vai alla pagina portfolio">Portfolio</a></li>
+        <li><a href="journal.html" aria-label="Vai alla pagina journal">Journal</a></li>
+        <li><a href="contatti.html" aria-label="Vai alla pagina contatti">Contatti</a></li>
+      </ul>
+
+      <button class="burger-menu" aria-label="Apri il menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button class="close-menu" aria-label="Chiudi il menu" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+  <!-- Sezione 1 -->
+  <section class="full-screen">
+    <img src="img/img.case_opensound/opensoud_poster.jpg" alt="poster creato da Pixelcraft per Open Sound Festival"
+      class="bg-image">
+    <div class="caption bottom-left title">
+      <h1>Open Sound Festival</h1>
+    </div>
+    <div class="scroll-down" onclick="scrollNextSection()">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Sezione 2 -->
+  <section class="full-screen">
+    <img src="img/img.case_opensound/opensoud_tote.jpg" alt="tote bag creata da Pixelcraft per Open Sound Festival"
+      class="bg-image">
+    <div class="caption bottom-left">
+      <h3>Valori</h3>
+      <p>Il progetto valorizza l&#8217;identità visiva dell&#8217;edizione 2023 del festival, tenutosi a Matera e in altri luoghi
+        della Basilicata, con artisti come Nu Genea, Jeff Mills e Ninos du Brasil. La campagna comunica i temi chiave
+        del programma, rafforzando la visione di Open Sound in un panorama musicale molto competitivo.</p>
+    </div>
+  </section>
+
+  <!-- Sezione 3 -->
+  <section class="full-screen full-screen3">
+    <img src="img/img.case_opensound/opensoud_website.jpg"
+      alt="sito web e applicazione creati da Pixelcraft per Open Sound Festival" class="bg-image">
+    <div class="caption bottom-left">
+      <h3>Processo creativo</h3>
+      <p>Il festival, con le grafiche rosse di PixelCraft, riflette sul legame tra musica e territorio, proponendo una
+        &ldquo;land music&rdquo; in cui il paesaggio fisico diventa paesaggio sonoro. Questo concept guida la comunicazione visiva e
+        digitale, curata interamente da PixelCraft prima dell&#8217;evento.</p>
+    </div>
+  </section>
+
+  <!-- Icona info -->
+  <div class="info-icon" onclick="toggleInfoPanel()">
+    <i class="fas fa-info-circle" aria-label="vai all'approfondimento del caso studio "></i>
+  </div>
+
+  <!-- Pannello verticale -->
+  <article id="infoPanel" class="info-panel">
+    <button class="close-btn" onclick="toggleInfoPanel()">
+      <i class="fas fa-times" aria-label="chiudi l'approfondimento del caso studio "></i>
+    </button>
+    <div class="info-content">
+      <h2>Open Sound Festival</h2>
+      <p>Nel panorama dei festival musicali italiani si impone un&#8217;esperienza di land music. Il legame tra suono e
+        territorio, nell&#8217;immagine di Bellissimo per l&#8217;edizione 2025 del festival Open Sound a Matera.</p>
+
+      <table aria-labelledby="tableTitle">
+        <caption id="tableTitle">Informazioni sul progetto</caption>
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Dettagli</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Cliente</th>
+            <td>Open Sound Festival - Comune di Matera</td>
+          </tr>
+          <tr>
+            <th scope="row">Anno</th>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <th scope="row">Servizi</th>
+            <td>Branding, Web Design, Merchandising</td>
+          </tr>
+          <tr>
+            <th scope="row">Durata</th>
+            <td>4 mesi</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      <p>Open Sound è un programma di esperienze musicali nato per fare incontrare i suoni della cultura popolare con le
+        nuove forme di espressione. Lo studio ha accompagnato l&#8217;associazione organizzatrice in un percorso di revisione
+        e consolidamento della comunicazione: la fase di branding ha aiutato a definire meglio le attività del team e i
+        valori profondi su cui fondano entrambe. Open Sound vuole tornare al valore originario del rapporto con la
+        musica, come racconta il motto <em>Reliving Origins</em> proposto da Pixel Craft.</p>
+    </div>
+  </article>
+
+  <section class="portfolio-container">
+    <h2>Progetti correlati</h2>
+    <div class="portfolio">
+      <div class="project">
+        <div class="project-image-wrapper">
+          <img src="img/img.portfolio/portfolio.tabli.jpg" alt="Tablì Lavazza">
+          <div class="overlay">
+            <div>Una tab al 100% di caffè, il futuro nella tazzina.</div>
+          </div>
+        </div>
+        <div class="project-title">Tablì Lavazza</div>
+      </div>
+
+      <div class="project">
+        <div class="project-image-wrapper">
+          <img src="img/img.portfolio/portfolio.abbonamentoMusei.jpg" alt="Abbonamento Musei">
+          <div class="overlay">
+            <div>Una nuova identità per il museo più grande d’Italia.</div>
+          </div>
+        </div>
+        <div class="project-title">Abbonamento Musei</div>
+      </div>
+
+      <div class="project">
+        <div class="project-image-wrapper">
+          <img src="img/img.portfolio//portfolio.laVenariaReale.jpg" alt="La Venaria Reale">
+          <div class="overlay">
+            <div>La Reggia si apre a una naturale evoluzione visiva.</div>
+          </div>
+        </div>
+        <div class="project-title">La Venaria Reale</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <section class="keep-in-touch">
+    <div class="text-section">
+      <h2>Costruiamo esperienze<br>che lasciano il segno,<br><span>un pixel alla volta.</span></h2>
+      <h3 class="subtitle">Iscriviti alla nostra newsletter</h3>
+    </div>
+
+    <form class="form-section" method="post">
+      <div class="form-row">
+        <input type="text" id="name" name="name" required placeholder="Nome" autocomplete="given-name">
+        <input type="text" id="surname" name="surname" required placeholder="Cognome" autocomplete="family-name">
+      </div>
+
+      <input type="email" id="email" name="email" required placeholder="Email" autocomplete="email">
+
+      <button type="submit" class="send-button" aria-label="iscriviti alla newsletter">Iscriviti</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>Pixel Craft</strong>
+        <p>P.IVA 12345678901</p>
+      </div>
+      <div class="footer-center">
+        <p>© 2025 Pixel Craft. Tutti i diritti riservati.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="https://web.telegram.org/a/" rel="noopener noreferrer" target="_blank"
+            aria-label="Contattaci su Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://www.whatsapp.com/?lang=it_IT" rel="noopener noreferrer" target="_blank"
+            aria-label="Scrivici su WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>Supporto: <a href="mailto:info@pixelcraft.com">info@pixelcraft.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

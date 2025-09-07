@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal</title>
+  <meta name="description" content="Scopri le news del mondo della comunicazione grazie ai nostri articoli.">
+  <meta name="keywords" content="Pixel Craft, blog, articoli, comunicazione, branding, territorio">
+  <meta name="author" content="Pixel Craft, Pietro Salciarini">
+
+  <link rel="icon" href="img/Pixelcraft_favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/journal.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ===== GOOGLE FONT - Montserrat ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="fullwidth">
+    <a href="https://www.facebook.com/?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
+
+    <nav class="navbar">
+      <a href="home.html">
+        <img src="img/pixelcraft.png" alt="Logo" class="logo" aria-label="Vai alla homepage" >
+      </a>
+
+      <ul class="nav-links" aria-label="Menu di navigazione">
+        <li><a href="home.html" aria-label="Vai alla homepage">Home</a></li>
+        <li><a href="about.html" aria-label="Vai alla pagina about">About</a></li>
+        <li><a href="portfolio.html" aria-label="Vai alla pagina portfolio">Portfolio</a></li>
+        <li><a href="journal.html" aria-label="Vai alla pagina journal"  class="active">Journal</a></li>
+        <li><a href="contatti.html" aria-label="Vai alla pagina contatti">Contatti</a></li>
+      </ul>
+
+      <button class="burger-menu" aria-label="Apri il menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button class="close-menu" aria-label="Chiudi il menu" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <div class="slideshow">
+      <img src="img/img.journal/journalArticolo_graficaFiliere.png" class="slide active"
+        alt="persone che fanno brainstorming su un grande foglio pieno di scritte">
+    </div>
+
+    <div class="hero-content">
+      <h1>Journal</h1>
+      <p>
+        Idee, ispirazioni e approfondimenti: il nostro blog è uno spazio dove condividiamo pensieri, esperienze e
+        visioni sul mondo della comunicazione visiva e oltre.
+        Qui raccontiamo storie di progetti, riflessioni sui trend emergenti e consigli pratici per affrontare le sfide
+        creative di oggi.
+      </p>
+
+      <p>
+        Dall’identità di brand alla sostenibilità nel design, dal web alle arti visive, esploriamo temi che ci
+        appassionano e ci guidano nel nostro lavoro quotidiano.
+        Un luogo di confronto e scoperta, pensato per chi vuole restare in movimento insieme a noi.
+      </p>
+    </div>
+
+  </section>
+
+  <main>
+
+    <section class="slider">
+      <h2>Articoli recenti</h2>
+      <div class="articlesContainer">
+        <article>
+          <img src="img/img.journal/journalarticolo_materieprime.png" alt="Foto di cipolle rosse">
+          <h2>Materie prime e identità locale: un racconto visivo per il Piemonte rurale</h2>
+          <br>
+          <a href="articolo_materieprime.html" class="link"
+            aria-label="vai all'articolo Materie Prime">Continua a
+            leggere</a>
+        </article>
+        <article>
+          <img src="img/img.journal/journalarticolo_nuovenarrazioni.png" alt="Ragazza in montagna">
+          <h2>Nuove narrazioni per il turismo lento: un laboratorio tra grafica e territorio</h2>
+          <br>
+          <a href="#">Continua a leggere</a>
+        </article>
+        <article>
+          <img src="img/img.journal/journalarticolo_packaging.png"
+            alt="Vari tipi di imballaggi biologici per cibo e bevande">
+          <h2>Packaging narrativo per il biologico: una sperimentazione in Val Varaita</h2>
+          <br>
+          <a href="#">Continua a leggere</a>
+        </article>
+        <article>
+          <img src="img/img.journal/journalarticolo_formazione.png" alt="Panorama montagna con lago">
+          <h2>Formazione e territorio: workshop per giovani comunicatori in Appennino</h2>
+          <br>
+          <a href="#">Continua a leggere</a>
+        </article>
+        <article>
+          <img src="img/img.journal/journalarticolo_graficafiliere.png"
+            alt="persone che fanno brainstorming su un grande foglio pieno di scritte">
+          <h2>Una grafica sistemica per le filiere corte: studio di identità visiva nel cuneese</h2>
+          <br>
+          <a href="#">Continua a leggere</a>
+        </article>
+        <article>
+          <img src="img/img.journal/journalarticolo_storieillustrate.png" alt="Copertina libro">
+          <h2>Storie illustrate per il clima: un progetto didattico nelle scuole di montagna</h2>
+          <br>
+          <a href="#">Continua a leggere</a>
+        </article>
+      </div>
+    </section>
+
+    <aside>
+      <h3>Potrebbe interessarti anche:</h3>
+      <div class="contenutoAside">
+
+        <a href="articolo_materieprime.html" class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_materieprime.png" alt="Foto di cipolle rosse">
+          <div class="testoAside">
+            <span class="tempoLettura">8 min</span>
+            <h4>Materie prime e identità locale: un racconto visivo per il Piemonte rurale</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </a>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_nuovenarrazioni.png" alt="Ragazza in montagna">
+          <div class="testoAside">
+            <span class="tempoLettura">5 min</span>
+            <h4>Nuove narrazioni per il turismo lento: un laboratorio tra grafica e territorio</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_packaging.png"
+            alt="Vari tipi di imballaggi biologici per cibo e bevande">
+          <div class="testoAside">
+            <span class="tempoLettura">7 min</span>
+            <h4>Packaging narrativo per il biologico: una sperimentazione in Val Varaita</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_formazione.png" alt="Panorama montagna con lago">
+          <div class="testoAside">
+            <span class="tempoLettura">6 min</span>
+            <h4>Formazione e territorio: workshop per giovani comunicatori in Appennino</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_graficafiliere.png"
+            alt="persone che fanno brainstorming su un grande foglio pieno di scritte">
+          <div class="testoAside">
+            <span class="tempoLettura">10 min</span>
+            <h4>Una grafica sistemica per le filiere: studio di identità visiva nel cuneese</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_storieillustrate.png" alt="Copertina libro">
+          <div class="testoAside">
+            <span class="tempoLettura">9 min</span>
+            <h4>Storie illustrate per il clima: un progetto didattico nelle scuole di montagna</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_identitavisiva.png" alt="Montagna innevata">
+          <div class="testoAside">
+            <span class="tempoLettura">5 min</span>
+            <h4>Un'identità visiva per la montagna che cambia</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_tipografia.png" alt="Grafica typography">
+          <div class="testoAside">
+            <span class="tempoLettura">7 min</span>
+            <h4>Tipografia come territorio: un carattere per le valli occitane</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_segnaletica.png" alt="Borgo storico">
+          <div class="testoAside">
+            <span class="tempoLettura">6 min</span>
+            <h4>Poster, pietra, pixel: segnaletica contemporanea per borghi storici</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+        <div class="contenutoAsideItem">
+          <img src="img/img.journal/journalarticolo_graficaambiente.png" alt="Grafica informativa">
+          <div class="testoAside">
+            <span class="tempoLettura">11 min</span>
+            <h4>Grafica per l'ambiente: toolkit visivo per iniziative locali</h4>
+            <p class="infoAside">2025, Pietro Salciarini</p>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <br><br><br>
+
+  <h2 class="articoloSectionsContainer">Tutti gli articoli</h2>
+  <section class="sectionsContainer">
+    <div class="categorie">
+      <div class="categoriesContainer">
+        <div class="category" data-filter="tutti">
+          <p>TUTTI</p>
+        </div>
+        <div class="category" data-filter="food&beverage">
+          <p>FOOD &amp; BEVERAGE</p>
+        </div>
+        <div class="category" data-filter="travel&identity">
+          <p>TRAVEL &amp; IDENTITY</p>
+        </div>
+        <div class="category" data-filter="design">
+          <p>DESIGN</p>
+        </div>
+        <div class="category" data-filter="communityDesign">
+          <p>COMMUNITY DESIGN</p>
+        </div>
+        <div class="category" data-filter="sustainability">
+          <p>SUSTAINABILITY</p>
+        </div>
+        <div class="category" data-filter="graphicDesign">
+          <p>GRAPHIC DESIGN</p>
+        </div>
+        <div class="category" data-filter="brandingTerritoriale">
+          <p>BRANDING TERRITORIALE</p>
+        </div>
+        <div class="category" data-filter="culturaLocale">
+          <p>CULTURA LOCALE</p>
+        </div>
+        <div class="category" data-filter="spazioPubblico">
+          <p>SPAZIO PUBBLICO</p>
+        </div>
+        <div class="category" data-filter="visualCommunication">
+          <p>VISUAL COMMUNICATION</p>
+        </div>
+        <div class="category" data-filter="visualStorytelling">
+          <p>VISUAL STORYTELLING</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="tuttiArticoli">
+    <div class="articolo" data-category="food&beverage, visualStorytelling">
+      <img src="img/img.journal/journalarticolo_materieprime.png" alt="Foto di cipolle rosse" id="journalArticolo_1">
+      <p class="genere"> <span class="food">FOOD &amp; BEVERAGE</span> <span class="visual">VISUAL STORYTELLING</span>
+      </p>
+      <h3>Materie prime e identità locale: un racconto visivo per il Piemonte rurale</h3>
+      <p class="info"> MAY 02 2025 | PIETRO SALCIARINI</p>
+      <br>
+      <a href="articolo_materieprime.html" class="button" class-label="vai all'articolo Materie Prime">Continua
+        a
+        leggere</a>
+
+    </div>
+
+    <div class="articolo" data-category="travel&identity">
+      <img src="img/img.journal/journalarticolo_nuovenarrazioni.png" alt="Ragazza in montagna">
+      <p class="genere"> <span class="travel">TRAVEL &amp; IDENTITY</span></p>
+      <h3>Nuove narrazioni per il turismo lento: un laboratorio tra grafica e territorio</h3>
+      <p class="info">APRIL 18 2025 | JESSICA SCANO</p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="design">
+      <img src="img/img.journal/journalarticolo_packaging.png"
+        alt="Vari tipi di imballaggi biologici per cibo e bevande">
+      <p class="genere"> <span class="design">DESIGN</span></p>
+      <h3>Packaging narrativo per il biologico: una sperimentazione in Val Varaita</h3>
+      <p class="info">APRIL 04 2025 | JESSICA SCANO</p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="communityDesign">
+      <img src="img/img.journal/journalarticolo_formazione.png" alt="Panorama montagna con lago">
+      <p class="genere"> <span class="community">COMMUNITY DESIGN</span></p>
+      <h3>Formazione e territorio: workshop per giovani comunicatori in Appennino</h3>
+      <p class="info"> MARCH 22 2025 | GIULIA SACCO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="graphicDesign">
+      <img src="img/img.journal/journalarticolo_graficafiliere.png"
+        alt="persone che fanno brainstorming su un grande foglio pieno di scritte">
+      <p class="genere"> <span class="graphic">GRAPHIC DESIGN</span></p>
+      <h3>Una grafica sistemica per le filiere: studio di identità visiva nel cuneese</h3>
+      <p class="info"> MARCH 04 2025 | DAISY ROMANIELLO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="sustainability , travel&identity">
+      <img src="img/img.journal/journalarticolo_storieillustrate.png" alt="Copertina libro">
+      <p class="genere"> <span class="sustainability">SUSTAINABILITY</span> <span class="travel">TRAVEL IDENTITY</span>
+      </p>
+      <h3>Storie illustrate per il clima: un progetto didattico nelle scuole di montagna</h3>
+      <p class="info"> FEBRUARY 12 2025 | JESSICA SCANO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="brandingTerritoriale">
+      <img src="img/img.journal/journalarticolo_identitavisiva.png" alt="Montagna innevata">
+      <p class="genere"> <span class="territoriale">BRANDING TERRITORIALE</span></p>
+      <h3>Un'identità visiva per la montagna che cambia</h3>
+      <p class="info"> FEBRUARY 01 2025 | GIULIA SACCO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="culturaLocale , graphicDesign">
+      <img src="img/img.journal/journalarticolo_tipografia.png" alt="Grafica typography">
+      <p class="genere"> <span class="locale">CULTURA LOCALE</span> <span class="graphic">GRAPHIC DESIGN</span></p>
+      <h3>Tipografia come territorio: un carattere per le valli occitane</h3>
+      <p class="info"> JANUARY 29 2025 | PIETRO SALCIARINI </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="spazioPubblico">
+      <img src="img/img.journal/journalarticolo_segnaletica.png" alt="Borgo storico">
+      <p class="genere"> <span class="spazio">SPAZIO PUBBLICO</span></p>
+      <h3>Poster, pietra, pixel: segnaletica contemporanea per borghi storici</h3>
+      <p class="info"> JANUARY 15 2025 | JESSICA SCANO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="visualCommunication culturaLocale">
+      <img src="img/img.journal/journalarticolo_graficaambiente.png" alt="Grafica informativa">
+      <p class="genere"> <span class="visual_comm">VISUAL COMMUNICATION</span><span class="locale">CULTURA LOCALE</span>
+      </p>
+      <h3>Grafica per l'ambiente: toolkit visivo per iniziative locali</h3>
+      <p class="info"> DECEMBER 12 2024 | DAISY ROMANIELLO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="brandingTerritoriale">
+      <img src="img/img.journal/journalarticolo_castelluccionorcia.png" alt="Campi di Castelluccio di Norcia">
+      <p class="genere"> <span class="territoriale">BRANDING TERRITORIALE</span></p>
+      <h3>I colori del territorio: una palette per la comunicazione rurale</h3>
+      <p class="info"> DECEMBER 04 2024 | JESSICA SCANO </p>
+      <br>
+      <a href="#" class="button">Continua a leggere</a>
+    </div>
+
+    <div class="articolo" data-category="spazioPubblico">
+      <img src="img/img.journal/journalarticolo_microeditoria.png" alt="Grafica cervello con schema">
+      <p class="genere"> <span class="spazio">SPAZIO PUBBLICO</span></p>
+      <h3>Micro-editoria e territorio: il design delle storie locali</h3>
+      <p class="info"> NOVEMBER 28 2024 | JESSICA SCANO </p>
+      <br>
+      <a href="#" class="button btn-journal">Continua a leggere</a>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>Pixel Craft</strong>
+        <p>P.IVA 12345678901</p>
+      </div>
+
+      <div class="footer-center">
+        <p>© 2025 Pixel Craft. Tutti i diritti riservati.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="https://web.telegram.org/a/" rel="noopener noreferrer" target="_blank"
+            aria-label="vai al sito di telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://www.whatsapp.com/?lang=it_IT" rel="noopener noreferrer" target="_blank"
+            aria-label="vai al sito di whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>Supporto: <a href="mailto:info@pixelcraft.com">info@pixelcraft.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

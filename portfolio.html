@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <meta name="description"
+    content="Scopri i progetti di branding, digital e visual identity curati da Pixel Craft. Il nostro portfolio creativo.">
+  <meta name="keywords" content="Pixel Craft, portfolio, progetti creativi, branding, design, identità visiva">
+  <meta name="author" content="Pixel Craft, Daisy Romaniello">
+
+  <link rel="icon" href="img/pixelcraft_favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ===== GOOGLE FONT - Montserrat ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="fullwidth">
+    <a href="https://www.facebook.com/?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
+
+    <nav class="navbar">
+      <a href="home.html">
+        <img src="img/pixelcraft.png" alt="Logo" class="logo" aria-label="Vai alla homepage" >
+      </a>
+
+      <ul class="nav-links" aria-label="Menu di navigazione">
+        <li><a href="home.html" aria-label="Vai alla homepage">Home</a></li>
+        <li><a href="about.html" aria-label="Vai alla pagina about">About</a></li>
+        <li><a href="portfolio.html" class="active" aria-label="Vai alla pagina portfolio">Portfolio</a></li>
+        <li><a href="journal.html" aria-label="Vai alla pagina journal">Journal</a></li>
+        <li><a href="contatti.html" aria-label="Vai alla pagina contatti">Contatti</a></li>
+      </ul>
+
+      <button class="burger-menu" aria-label="Apri il menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button class="close-menu" aria-label="Chiudi il menu" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO CON SLIDESHOW -->
+    <section class="hero">
+      <div class="slideshow">
+        <img src="img/img.home/home.caffe.jpg" class="slide active" alt="Progetto Caffè">
+        <img src="img/img.home/home.magazine.jpg" class="slide" alt="Progetto Magazine">
+        <img src="img/img.home/home.opensound.jpg" class="slide" alt="Progetto OpenSound">
+        <img src="img/img.home/home.primapower.jpg" class="slide" alt="Progetto PrimaPower">
+        <img src="img/img.home/home.shampoo.jpg" class="slide" alt="Branding Shampoo Slide">
+      </div>
+
+      <div class="hero-content">
+        <h1>Portfolio</h1>
+        <p>
+          In ogni progetto mettiamo in campo creativit&aacute;, competenze e strategia. Il nostro portfolio raccoglie una
+          selezione di lavori che raccontano chi siamo:
+          ogni brand, ogni sito, ogni campagna è frutto di una visione condivisa con il cliente e realizzata con cura
+          artigianale.
+        </p>
+        <p>
+          Dai rebranding aziendali ai lanci prodotto, dalla progettazione web alle produzioni multimediali, creiamo
+          esperienze visive e comunicative che lasciano il segno.
+          I nostri progetti spaziano tra settori industriali, moda, cultura ed eventi, dimostrando versatilità e
+          attenzione ai dettagli.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <h2 class="portfolio-title">Progetti</h2>
+      <div class="portfolio">
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.isiFoundation.jpg" alt="Progetto ISI Foundation">
+            <div class="overlay">
+              <div>Un sistema grafico dinamico per il rebranding di un centro di ricerca scientifica.</div>
+            </div>
+          </div>
+          <div class="project-title"><a href="case_isifoundation.html" aria-label="vai al progetto">ISI Foundation</a></div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.openSoundFestival.jpg" alt="Progetto Open Sound Festival" aria-label="vai al progetto">
+            <div class="overlay">
+              <div>Una campagna manifesto per un’esperienza di land music.</div>
+            </div>
+          </div>
+          <div class="project-title"><a href="case_musicsound.html">Open Sound Festival</a></div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.tabli.jpg" alt="Progetto Tablì Lavazza">
+            <div class="overlay">
+              <div>Una tab al 100% di caffè, il futuro nella tazzina.</div>
+            </div>
+          </div>
+          <div class="project-title">Tablì Lavazza</div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.abbonamentoMusei.jpg" alt="Progetto Abbonamento Musei">
+            <div class="overlay">
+              <div>Una nuova identità per il museo più grande d’Italia.</div>
+            </div>
+          </div>
+          <div class="project-title">Abbonamento Musei</div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio//portfolio.laVenariaReale.jpg" alt="Progetto La Venaria Reale">
+            <div class="overlay">
+              <div>La Reggia si apre a una naturale evoluzione visiva.</div>
+            </div>
+          </div>
+          <div class="project-title">La Venaria Reale</div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.tenderly.jpg" alt="Progetto Tenderly">
+            <div class="overlay">
+              <div>La nuova campagna sull’importanza della tenerezza nella vita di tutti i giorni.</div>
+            </div>
+          </div>
+          <div class="project-title">Tenderly</div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.zignone.jpg" alt="Progetto Zignone">
+            <div class="overlay">
+              <div>Una campagna in campagna per il futuro di un lanificio biellese.</div>
+            </div>
+          </div>
+          <div class="project-title">Zignone</div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.effettoPiemonte.jpg" alt="Progetto Effetto Piemonte">
+            <div class="overlay">
+              <div>Un progetto visivo per raccontare un territorio in grafica.</div>
+            </div>
+          </div>
+          <div class="project-title">Effetto Piemonte</div>
+        </div>
+
+        <div class="project">
+          <div class="project-image-wrapper">
+            <img src="img/img.portfolio/portfolio.officinaBonta.jpg" alt="Progetto Officina Bontà">
+            <div class="overlay">
+              <div>Il bio, buono e bello. Dal nome al pack, una nuova marca.</div>
+            </div>
+          </div>
+          <div class="project-title">Officina Bontà</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="keep-in-touch">
+    <div class="text-section">
+      <h2>Costruiamo esperienze<br>che lasciano il segno,<br><span>un pixel alla volta.</span></h2>
+      <h3 class="subtitle">Iscriviti alla nostra newsletter</h3>
+    </div>
+
+    <form class="form-section" action="#" method="post">
+      <div class="form-row">
+        <input type="text" id="name" name="name" required placeholder="Nome" autocomplete="given-name">
+        <input type="text" id="surname" name="surname" required placeholder="Cognome" autocomplete="family-name">
+      </div>
+      <input type="email" id="email" name="email" required placeholder="Email" autocomplete="email">
+      <button type="submit" class="send-button" aria-label="Invia iscrizione alla newsletter">Iscriviti</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>Pixel Craft</strong>
+        <p>P.IVA 12345678901</p>
+      </div>
+      <div class="footer-center">
+        <p>© 2025 Pixel Craft. Tutti i diritti riservati.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="https://web.telegram.org/a/" rel="noopener noreferrer" target="_blank"
+            aria-label="Contattaci su Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://www.whatsapp.com/?lang=it_IT" rel="noopener noreferrer" target="_blank"
+            aria-label="Scrivici su WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>Supporto: <a href="mailto:info@pixelcraft.com">info@pixelcraft.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
