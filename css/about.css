@@ -1,109 +1,27 @@
-/* STRUTTURA BLOCCHI */
-.photo-row {
-    padding-top: var(--padding-large);
-    display: flex;
-    flex-direction: column;
-    max-width: 70%;     /* limita la larghezza massima */
-    margin-inline: auto;  /* centra la riga orizzontalmente */
-    width: 90%;           /* larghezza fluida per schermi piccoli */
-  }
-  
-  .photo,
-  .color-block {
-    aspect-ratio: 1 / 1; /* altezza uguale alla larghezza */
-    width: 100%;
-    border-radius: 0.3rem;  
-    overflow: hidden;
-  }
-  
-  /* FOTO */
-  .photo img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
-    display: block;
-  }
-  
-  /* BLOCCHI COLORATI */
-  .color-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    padding: var(--padding-medium);
-    color: var(--background);
-  }
-  
-  .color1 { background-color: var(--nav-bg); }
-  .color2 { background-color: var(--footer); }
-  .color3 { background-color: var(--blue); }
-  .color4 { background-color: var(--light_blue);}
-  
-  .color-block h2 {
+/* Colorazioni delle card persona */
+.color1 { background-color: var(--nav-bg)!important; color: var(--background)!important; }
+.color2 { background-color: var(--footer)!important; color: var(--background)!important; }
+.color3 { background-color: var(--blue)!important; color: var(--background)!important; }
+.color4 { background-color: var(--light_blue)!important; color: var(--background)!important; }
+
+.card-title {
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .color-block p {
-    margin: 0;
-  }
+}
 
-  #jessica{
-    margin-bottom: 2rem;
-  }
-  
-  /* SOCIAL ICONS */
-  .social-icons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    gap: 1rem;
-    color: var(--background);
-  }
-  
-  .social-icons a {
-    color: var(--background);
-    font-size: 1.5rem;
+.card-text {
+    margin: 0;
+}
+
+/* Icone social */
+.social-icons a {
+    color: var(--blue);
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
+    transition: transform 0.2s, color 0.2s;
     text-decoration: none;
-    transition: transform 0.2s ease;
-  }
-  
-  .social-icons a:hover {
+}
+.social-icons a:hover {
     transform: scale(1.2);
-    color: var(--background);
-  }
-  
-  .about .fab {
-    color: var(--background);
-  }
-  
-  /* DESKTOP: affianca foto e blocco, perfettamente uguali */
-  @media (min-width: 768px) {
-    .photo-row {
-      flex-direction: row;
-      gap: 2rem;
-    }
-  
-    .photo-row.reverse {
-      flex-direction: row-reverse;
-    }
-  
-    .photo,
-    .color-block {
-      width: 50%;
-      aspect-ratio: 1 / 1;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .photo-row,
-    .photo-row.reverse {
-      flex-direction: column;
-      height: auto;
-      gap: 2rem;
-    }
-  }
-  
+    color: var(--light_blue);
+}
