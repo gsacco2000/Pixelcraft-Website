@@ -1,198 +1,83 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatti</title>
-  <meta name="description" content="Scopri le nostre sedi e i modi in cui contattarci">
-  <meta name="keywords" content="Pixel Craft, form di contatto, newsletter, sedi">
-  <meta name="author" content="Pixel Craft, Jessica Scano">
-
-  <link rel="icon" href="img/pixelcraft_favicon.png" type="image/png">
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contatti.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- ===== GOOGLE FONT - Montserrat ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contattaci</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Stile personalizzato -->
+  <link rel="stylesheet" href="contatti.css" />
 </head>
-
 <body>
-
-  <!-- Intestazione principale utilizzata in tutte le pagine del sito -->
-  <header class="fullwidth">
-    <a href="https://www.facebook.com/?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
-
-    <nav class="navbar">
-      <a href="home.html">
-        <img src="img/pixelcraft.png" alt="Logo" class="logo" aria-label="Vai alla homepage" >
-      </a>
-
-      <ul class="nav-links" aria-label="Menu di navigazione">
-        <li><a href="home.html" aria-label="Vai alla homepage">Home</a></li>
-        <li><a href="about.html" aria-label="Vai alla pagina about">About</a></li>
-        <li><a href="portfolio.html"  aria-label="Vai alla pagina portfolio">Portfolio</a></li>
-        <li><a href="journal.html" aria-label="Vai alla pagina journal">Journal</a></li>
-        <li><a href="contatti.html"  class="active" aria-label="Vai alla pagina contatti">Contatti</a></li>
-      </ul>
-
-      <button class="burger-menu" aria-label="Apri il menu" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <button class="close-menu" aria-label="Chiudi il menu" onclick="toggleMenu()">
-        <i class="fas fa-times"></i>
-      </button>
-    </nav>
-  </header>
-
-
-
-
-
-  <main>
-
-    <!-- HERO CON SLIDESHOW -->
-
-    <section class="hero">
-      <!-- Slideshow -->
-      <div class="slideshow">
-        <img src="img/img.contact/contact.hero.jpg" class="slide active" alt="Foto del duomo di Milano">
-
-      </div>
-
-      <!-- Text content -->
-      <div class="hero-content">
+  <main class="container my-5 contatti">
+    <div class="row g-4">
+      <section class="col-lg-5 titolo">
         <h1>Contattaci</h1>
-        <p>Hai un progetto in mente o vuoi semplicemente conoscerci meglio?
-          Contattaci e scopri come possiamo dare vita alle tue idee.
-          Siamo pronti ad ascoltarti e costruire insieme qualcosa di straordinario.</p>
-      </div>
-    </section>
+        <p>Hai un progetto in mente o vuoi semplicemente conoscerci meglio? Contattaci e scopri come possiamo dare vita alle tue idee. Siamo pronti ad ascoltarti e costruire insieme qualcosa di straordinario.</p>
+        <h2>Restiamo in contatto</h2>
+        <p>Creiamo qualcosa di memorabile insieme.</p>
 
-
-
-
-
-    <div class="contatti">
-      <div class="contenitore-colonne">
-        <!-- Colonna Sinistra - Titolo -->
-        <section class="titolo">
-          <h1>Restiamo in contatto</h1>
-          <p>Creiamo qualcosa di memorabile insieme.</p>
-        </section>
-
-        <!-- Colonna Destra - Form -->
-        <section class="form-contatto">
-          <h2>Scrivici un messaggio</h2>
-          <form action="#" method="post">
-
-            <div class="campo">
-              <input type="text" id="nome" name="nome" required placeholder=" " autocomplete="given-name">
-              <label for="nome">Ciao! Come ti chiami? *</label>
-            </div>
-
-            <div class="campo">
-              <select id="oggetto" name="oggetto" required>
-                <option value="" label="seleziona"></option>
-                <option value="collaborazione">Vi racconto la mia idea</option>
-                <option value="preventivo">Vorrei un preventivo</option>
-                <option value="altro">Altro</option>
-              </select>
-              <label for="oggetto">Cosa ti porta qui? *</label>
-            </div>
-
-            <div class="campo">
-              <textarea id="messaggio" name="messaggio" rows="5" required placeholder=" "></textarea>
-              <label for="messaggio">Come possiamo aiutarti? *</label>
-            </div>
-
-            <div class="campo">
-              <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
-              <label for="file">Allega un file (opzionale)</label>
-            </div>
-
-            <div class="campo">
-              <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
-              <label for="email">Qual &egrave; la tua email? *</label>
-            </div>
-
-            <div class="campo">
-              <input type="tel" id="telefono" name="telefono" placeholder=" " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}*"
-                autocomplete="tel">
-              <label for="telefono">Il tuo numero di telefono (opzionale)</label>
-            </div>
-
-            <div class="checkbox-container">
-              <input type="checkbox" id="privacy" name="privacy" required>
-              <label for="privacy">Ho letto e accetto l&#39;<a href="#">informativa sulla privacy</a> *</label>
-            </div>
-
-            <button class="button" type="submit">Invia</button>
-          </form>
-        </section>
-      </div>
-
-      <!-- Info sedi -->
-      <section class="info">
-        <div class="blocco">
-          <h2>Sede di Torino</h2>
-          <p>Corso Dante, 118<br>10126 Torino, Italia<br><a href="mailto:info@pixelcraft.it">info@pixelcraft.it</a></p>
-        </div>
-        <div class="blocco">
-          <h2>Sede di Milano</h2>
-          <p>Via Luisa Battistotti Sassi, 11<br>20133 Milano, Italia<br><a
-              href="mailto:milano@pixelcraft.it">milano@pixelcraft.it</a></p>
-        </div>
-        <div class="blocco">
-          <h2>Sede di Roma</h2>
-          <p>Viale Gorizia, 24<br>00198 Roma, Italia<br><a href="mailto:roma@pixelcraft.it">roma@pixelcraft.it</a></p>
+        <div class="info">
+          <div class="blocco">
+            <h2>Sede di Torino</h2>
+            <address>
+              Corso Dante, 118<br />
+              10126 Torino, Italia<br />
+              <a href="mailto:info@pixelcraft.it">info@pixelcraft.it</a>
+            </address>
+          </div>
+          <div class="blocco">
+            <h2>Sede di Milano</h2>
+            <address>
+              Via Luisa Battistotti Sassi, 11<br />
+              20133 Milano, Italia<br />
+              <a href="mailto:milano@pixelcraft.it">milano@pixelcraft.it</a>
+            </address>
+          </div>
+          <div class="blocco">
+            <h2>Sede di Roma</h2>
+            <address>
+              Viale Gorizia, 24<br />
+              00198 Roma, Italia<br />
+              <a href="mailto:roma@pixelcraft.it">roma@pixelcraft.it</a>
+            </address>
+          </div>
         </div>
       </section>
-    </div> 
 
-    <!-- Mappa con iframe -->
-<section class="mappa">
-  <h2>Trova la nostra sede principale</h2>
-  <div class="mappa-container">
-    <iframe title="Mappa della sede principale a Torino" 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.420569427548!2d7.669276015569898!3d45.050160879098225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d1c7cb6d25d%3A0x1c3ffcb92eb7418a!2sCorso%20Dante%2C%20118%2C%2010126%20Torino%20TO!5e0!3m2!1sit!2sit!4v1714578912345"
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</section>
+      <section class="col-lg-7 form-contatto">
+        <h2>Scrivici un messaggio</h2>
+        <form>
+          <div class="mb-3 campo form-floating">
+            <input type="text" class="form-control" id="nome" placeholder="Il tuo nome" />
+            <label for="nome">Nome</label>
+          </div>
 
+          <div class="mb-3 campo form-floating">
+            <input type="email" class="form-control" id="email" placeholder="La tua email" />
+            <label for="email">Email</label>
+          </div>
+
+          <div class="mb-3 campo form-floating">
+            <textarea class="form-control" placeholder="Scrivi il tuo messaggio..." id="messaggio" style="height: 120px"></textarea>
+            <label for="messaggio">Messaggio</label>
+          </div>
+
+          <div class="checkbox-container form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="privacyCheck" />
+            <label class="form-check-label" for="privacyCheck">
+              Accetto le <a href="#">norme sulla privacy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+      </section>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-left">
-        <strong>Pixel Craft</strong>
-        <p>P.IVA 12345678901</p>
-      </div>
-      <div class="footer-center">
-        <p>© 2025 Pixel Craft. Tutti i diritti riservati.</p>
-      </div>
-      <div class="footer-right">
-        <div class="footer-social">
-          <a href="https://web.telegram.org/a/" rel="noopener noreferrer" target="_blank"
-            aria-label="Contattaci su Telegram"><i class="fab fa-telegram"></i></a>
-          <a href="https://www.whatsapp.com/?lang=it_IT" rel="noopener noreferrer" target="_blank"
-            aria-label="Scrivici su WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p>Supporto: <a href="mailto:info@pixelcraft.com">info@pixelcraft.com</a></p>
-      </div>
-    </div>
-  </footer>
-  
-  <script src="js/script.js"></script>
-  
-  </body>
-  </html>
+  <!-- Bootstrap JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
