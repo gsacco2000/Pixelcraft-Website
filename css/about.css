@@ -1,27 +1,124 @@
-/* Colorazioni delle card persona */
-.color1 { background-color: var(--nav-bg)!important; color: var(--background)!important; }
-.color2 { background-color: var(--footer)!important; color: var(--background)!important; }
-.color3 { background-color: var(--blue)!important; color: var(--background)!important; }
-.color4 { background-color: var(--light_blue)!important; color: var(--background)!important; }
-
-.card-title {
-    font-size: 1.7rem;
-    margin-bottom: 0.5rem;
+:root {
+  --nav-bg: #1a1a1a;
+  --footer: #333333;
+  --blue: #003366;
+  --light_blue: #0077b6;
+  --background: #ffffff;
+  --padding-large: 3rem;
+  --padding-medium: 1.5rem;
 }
 
-.card-text {
-    margin: 0;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background);
+  color: #000;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Icone social */
+/* HERO: immagine di sfondo (copre, testo sopra) */
+.hero {
+  background: url("../img/img.about/about.hero.jpg") center/cover no-repeat;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* immagini team: riempiono il lato e mantengono object-fit */
+.img-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blocco colorato (centrato) */
+.color-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--background);
+}
+
+/* colori originali preservati */
+.color1 { background-color: var(--nav-bg); }
+.color2 { background-color: var(--footer); }
+.color3 { background-color: var(--blue); }
+.color4 { background-color: var(--light_blue); }
+
+/* titoli blocco */
+.color-block h2 {
+  font-size: 1.7rem;
+  margin-bottom: .5rem;
+}
+
+/* icone social nel blocco */
+.social-icons {
+  margin-top: .75rem;
+  display: inline-flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-icons a {
-    color: var(--blue);
-    font-size: 1.8rem;
-    margin: 0 0.5rem;
-    transition: transform 0.2s, color 0.2s;
-    text-decoration: none;
+  font-size: 1.35rem;
+  color: var(--background);
+  transition: transform .18s ease, opacity .18s ease;
 }
+
 .social-icons a:hover {
-    transform: scale(1.2);
-    color: var(--light_blue);
+  transform: scale(1.15);
+  opacity: 0.9;
 }
+
+/* keep-in-touch (newsletter) */
+.keep-in-touch {
+  background-color: var(--light_blue);
+  color: var(--background);
+}
+
+.keep-in-touch h2 span {
+  color: yellow;
+}
+
+/* FOOTER & link hover */
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE: su md+ facciamo i blocchi quadrati (aspect-ratio) e assicuriamo che le colonne si estendano in altezza */
+@media (min-width: 768px) {
+  .team-row {
+    align-items: stretch;
+  }
+
+  /* rendi le colonne 1:1 (quadrate) su md+ */
+  .team-row > .col-md-6 {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* assicura che il contenuto color-block sia centrato verticalmente */
+  .team-row > .col-md-6 .color-block {
+    padding: var(--padding-medium);
+  }
+}
+
+/* Mobile: spaziatura tra elementi */
+@media (max-width: 767.98px) {
+  .team-row + .team-row {
+    margin-top: 1rem;
+  }
+}
+
+/* piccole transizioni generali */
+.img-cover, .color-block {
+  transition: all .15s ease;
+}
+
