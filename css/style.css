@@ -19,14 +19,9 @@
 }
 
 
-
-
-
-
 /* RESET*/
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
@@ -321,107 +316,65 @@ nav ul.nav-links.active ~ .burger-menu {
 
 
 
-/* KEEP IN TOUCH SECTION */
+/* KEEP IN TOUCH SECTION - FORM DI CONTATTO */
 .keep-in-touch {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 2.5rem;
   background: var(--nav-bg);
   color: var(--background);
-  gap: 2rem;
-  flex-wrap: wrap;
+  border-radius: 0;
 }
 
-.text-section {
-  flex: 1;
-  max-width: 45%;
+.text-section span,
+.text-info {
+  color: var(--light_blue) !important;
 }
 
-.text-section span {
-  color: var(--light_blue);
-}
-
-.text-section .subtitle {
-  font-size: 1.3rem;
+.subtitle {
   font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
 }
 
 .form-section {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.05);
-  padding: var(--padding-large);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
 }
 
-.form-row {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.form-row input {
-  flex: 1;
-  min-width: 150px;
-}
-
-.form-section input {
-  width: 100%;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 8px;
+.form-control {
   background: rgba(255, 255, 255, 0.1);
   color: var(--background);
-  font-size: var(--font-p);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  height: 3rem;
 }
 
-.form-section input::placeholder {
+.form-control::placeholder {
   color: #b0b0b0;
 }
 
-.send-button {
-  margin-top: 1rem;
-  padding: var(--padding-small) var(--padding-large);
-  background: none;
-  border: 1px solid var(--background);
-  border-radius: 8px;
+.btn-outline-light {
+  border: 2px solid var(--background);
   color: var(--background);
-  cursor: pointer;
   font-weight: 700;
-  font-size: var(--font-p);
+  border-radius: 8px;
+  background: none;
   transition: background 0.3s, color 0.3s;
 }
 
-.send-button:hover {
+.btn-outline-light:hover,
+.btn-outline-light:focus {
   background: var(--light_blue);
   border-color: var(--light_blue);
   color: var(--nav-bg);
 }
 
-/* Responsive per keep-in-touch */
-@media (max-width: 768px) {
-  .keep-in-touch {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 767px) {
+  .keep-in-touch .text-section {
     text-align: center;
-  }
-
-  .text-section {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .form-section {
-    width: 100%;
+    margin-bottom: 2rem;
   }
 }
+
+
 
 
 
@@ -429,86 +382,39 @@ nav ul.nav-links.active ~ .burger-menu {
 .footer {
   background-color: var(--text);
   color: var(--background);
-  padding: var(--padding-medium)var(--padding-large);
+  letter-spacing: 0;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.footer-left {
-  flex: 1;
-  font-size: 1.3rem;
+.footer strong {
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
-.footer-left p {
-  font-size: 0.8rem;
-  color: var(--header);
-  margin-top: 0.5rem;
-}
-
-.footer-center {
-  flex: 1;
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-.footer-right {
-  flex: 1;
-  text-align: right;
-}
-
 .footer-social i {
-  margin-left: 0.5rem;
-  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
   color: var(--background);
   transition: color 0.3s;
+  vertical-align: middle;
 }
 
 .footer-social i:hover {
   color: var(--header);
 }
 
-.footer-right p {
-  margin-top: 0.5rem;
-  font-size: var(--font-p);
-}
-
-.footer-right a {
+.footer-support-link {
   color: var(--header);
   text-decoration: none;
   font-weight: 600;
+  transition: font-style 0.3s;
 }
-
-.footer-right a:hover {
+.footer-support-link:hover {
   font-style: italic;
 }
 
-/* Responsive per footer */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex: none;
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-right {
-    text-align: center;
-  }
-
-  .footer-social i {
-    margin: 0 0.5rem;
+@media (max-width: 767.98px) {
+  .footer strong {
+    display: block;
+    margin-bottom: 0.3rem;
   }
 }
