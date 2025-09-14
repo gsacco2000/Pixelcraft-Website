@@ -8,6 +8,7 @@
   --nav-bg: #003554;
   --text: #051923;
 
+
   --font-family: 'Montserrat', Arial, sans-serif;
   --font-p: 1rem;
 
@@ -16,6 +17,16 @@
   --padding-large: 2rem;
 
   --line-height: 1.6;
+}
+
+
+/* TEMA SCURO CON CLIC SU ICONA*/
+body.dark {
+  --background: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text: #e9e9e9;
 }
 
 
@@ -229,6 +240,7 @@ nav ul.nav-links.active ~ .burger-menu {
 }
 
 
+
 /* === HERO MOBILE-FIRST === */
 .hero {
   display: grid;
@@ -272,7 +284,7 @@ nav ul.nav-links.active ~ .burger-menu {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  color: var(--background);
+  color: white;
   z-index: 1;
 }
 
@@ -296,8 +308,7 @@ nav ul.nav-links.active ~ .burger-menu {
 
 /* BOTTONE GENERICO */
 .button {
-  background-color: var(--light_blue);
-  color: var(--background);
+  background-color: var(--skin-color);
   border: none;
   padding: 0.6rem var(--padding-medium);
   font-size: 0.9rem;
@@ -310,22 +321,13 @@ nav ul.nav-links.active ~ .burger-menu {
   text-decoration: none;
 }
 
-.button:hover {
-  background-color: var(--blue);
-}
-
 
 
 /* KEEP IN TOUCH SECTION - FORM DI CONTATTO */
 .keep-in-touch {
-  background: var(--nav-bg);
+  background: var(--skin-color);
   color: var(--background);
   border-radius: 0;
-}
-
-.text-section span,
-.text-info {
-  color: var(--light_blue) !important;
 }
 
 .subtitle {
@@ -348,7 +350,7 @@ nav ul.nav-links.active ~ .burger-menu {
 }
 
 .form-control::placeholder {
-  color: #b0b0b0;
+  color: #545454;
 }
 
 .btn-outline-light {
@@ -367,6 +369,11 @@ nav ul.nav-links.active ~ .burger-menu {
   color: var(--nav-bg);
 }
 
+.pixel{
+  color: var(--text);
+  font-style: italic;
+}
+
 @media (max-width: 767px) {
   .keep-in-touch .text-section {
     text-align: center;
@@ -380,8 +387,8 @@ nav ul.nav-links.active ~ .burger-menu {
 
   /* footer */
 .footer {
-  background-color: var(--text);
-  color: var(--background);
+  background-color: black;
+  color: var(--skin-color);
   letter-spacing: 0;
 }
 
@@ -393,17 +400,13 @@ nav ul.nav-links.active ~ .burger-menu {
 .footer-social i {
   margin: 0 0.5rem;
   font-size: 1.3rem;
-  color: var(--background);
+  color: var(--skin-color);
   transition: color 0.3s;
   vertical-align: middle;
 }
 
-.footer-social i:hover {
-  color: var(--header);
-}
-
 .footer-support-link {
-  color: var(--header);
+  color: white;
   text-decoration: none;
   font-weight: 600;
   transition: font-style 0.3s;
