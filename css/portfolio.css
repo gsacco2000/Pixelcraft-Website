@@ -4,35 +4,18 @@
   margin: 0 auto;
   padding-top: var(--padding-large, 3rem);
   padding-bottom: var(--padding-large, 3rem);
-  padding-left: var(--padding-small, 1rem); /* Aggiunto padding a sinistra */
+  padding-left: var(--padding-small, 1rem);
 }
 
-
-/* Rimosso display grid perché gestito da Bootstrap */
-/*
-.portfolio {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .portfolio {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-*/
-
+/* Griglia portfolio gestita da Bootstrap: elimina il CSS griglia custom */
 
 /* Ogni progetto */
 .project {
-  height: 100%; /* Per estendere tutta l'altezza della colonna bootstrap */
+  height: 100%; /* Estende tutta l'altezza della colonna bootstrap */
   opacity: 0;
   transform: translateY(40px) scale(0.94);
   transition: opacity 1s ease, transform 1s ease;
 }
-
 
 /* Quando diventa visibile */
 .project.visible {
@@ -40,16 +23,14 @@
   transform: translateY(0) scale(1);
 }
 
-
-/* Wrapper per immagine e overlay */
+/* Wrapper immagine e overlay */
 .project-image-wrapper {
-  position: relative; /* Mantiene overlay correttamente posizionato */
+  position: relative; /* Per overlay posizionato correttamente */
   overflow: hidden;
   border-radius: 0.3rem;
 }
 
-
-/* Immagine */
+/* Immagine progetto */
 .project img {
   width: 100%;
   display: block;
@@ -57,7 +38,6 @@
   transition: all 0.3s ease;
   border-radius: 0.3rem;
 }
-
 
 /* Overlay */
 .overlay {
@@ -79,26 +59,26 @@
   pointer-events: none;
   z-index: 2;
 }
+
 .overlay div {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-
-/* Hover sull'immagine mostra overlay e zooma l'immagine */
+/* Hover overlay e zoom immagine */
 .project-image-wrapper:hover .overlay {
   opacity: 1;
   transform: scale(1);
 }
+
 .project-image-wrapper:hover img {
   transform: scale(1.1);
   filter: blur(2px) brightness(0.8);
 }
 
-
-/* Titolo progetto sotto */
+/* Titolo progetto */
 .project-title, .project-title a {
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem 1rem; /* adattato padding per coerenza */
+  padding: 0.5rem 1rem 1rem;
   font-weight: bold;
   font-size: 1.2rem;
   text-align: left;
@@ -106,8 +86,7 @@
   color: var(--text, #333);
 }
 
-
 .project-title a:hover {
   font-style: italic;
-  color: var(--blue, #007bff); /* colore bootstrap blue come fallback */
+  color: var(--blue, #007bff); /* Usa il blu di Bootstrap come fallback */
 }
