@@ -17,13 +17,51 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/case_isifoundation.css">
 
+   <!-- foglio di stile selezionato per change color-->
+  <link rel="stylesheet" href="css/skins/color-1.css" />
+
+    <!-- ===== LIBRERIA ICONE - font awesome ===== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- ===== GOOGLE FONT - Montserrat ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+       <!-- ====== CAMBIO COLORE DEI TESTI - verranno cambiati con js (adesso sono disabled) ====== -->
+    <link
+      rel="stylesheet"
+      href="css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled/>
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled/>
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled/>
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled/>
+
+
+    <!-- ===== foglio di stile del color switcher - la sezione per il cambio colore ===== -->
+    <link rel="stylesheet" href="css/style-switcher.css" /> 
 </head>
+
 
 <body>
 
@@ -181,9 +219,6 @@
 </section>
 
 
-
-
-
   <!-- ===== FOOTER ===== -->
   <footer class="footer py-4">
   <div class="container">
@@ -215,9 +250,38 @@
   </div>
 </footer>
 
+<!-- ===== TOOLS PER CAMBIARE COLORE  ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="switcher fas fa-cog"></i> <!-- ===== fa-spin fa ruotare l'icona ===== -->
+      </div>
+
+      <h4>Scegli il tuo colore</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')">Giulia</span>
+        <span class="color-2" onclick="setActiveStyle('color-2')">Jessica</span>
+        <span class="color-3" onclick="setActiveStyle('color-3')">Daisy</span>
+        <span class="color-4" onclick="setActiveStyle('color-4')">Pietro</span>
+      </div>
+
+      <!-- ===== TOGGLE PER CAMBIARE TEMA (chiaro / scuro)  ===== -->
+      <div class=" day-night s-icon">
+        <i class="switcher fas"></i>
+      </div>
+
+    </div>
+
+
 
 
   <script src="js/script.js"></script>
-</body>
 
+<!-- ===== file js per i cambi di stile e del tema ===== -->
+  <script src="js/style-switcher.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+
+</body>
 </html>
