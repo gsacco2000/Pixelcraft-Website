@@ -1,13 +1,15 @@
-.portfolio-title {
+.portfolio-header {
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: var(--padding-large);
-  padding-bottom: var(--padding-large);
-  padding-left: var(--padding-small); /* Aggiunto padding a sinistra */
+  padding-top: var(--padding-large, 3rem);
+  padding-bottom: var(--padding-large, 3rem);
+  padding-left: var(--padding-small, 1rem); /* Aggiunto padding a sinistra */
 }
 
-/* Griglia del portfolio */
+
+/* Rimosso display grid perché gestito da Bootstrap */
+/*
 .portfolio {
   display: grid;
   gap: 1rem;
@@ -15,20 +17,22 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
 @media (min-width: 768px) {
   .portfolio {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+*/
+
 
 /* Ogni progetto */
 .project {
+  height: 100%; /* Per estendere tutta l'altezza della colonna bootstrap */
   opacity: 0;
   transform: translateY(40px) scale(0.94);
   transition: opacity 1s ease, transform 1s ease;
 }
+
 
 /* Quando diventa visibile */
 .project.visible {
@@ -36,12 +40,14 @@
   transform: translateY(0) scale(1);
 }
 
+
 /* Wrapper per immagine e overlay */
 .project-image-wrapper {
-  position: relative;
+  position: relative; /* Mantiene overlay correttamente posizionato */
   overflow: hidden;
   border-radius: 0.3rem;
 }
+
 
 /* Immagine */
 .project img {
@@ -52,6 +58,7 @@
   border-radius: 0.3rem;
 }
 
+
 /* Overlay */
 .overlay {
   position: absolute;
@@ -60,12 +67,12 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  color: var(--background);
+  color: var(--background, #fff);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--padding-small);
+  padding: var(--padding-small, 1rem);
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
@@ -75,6 +82,7 @@
 .overlay div {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
+
 
 /* Hover sull'immagine mostra overlay e zooma l'immagine */
 .project-image-wrapper:hover .overlay {
@@ -86,18 +94,20 @@
   filter: blur(2px) brightness(0.8);
 }
 
+
 /* Titolo progetto sotto */
 .project-title, .project-title a {
   margin-top: 0.5rem;
-  padding: 0.5rem var(--padding-small) var(--padding-small);
+  padding: 0.5rem 1rem 1rem; /* adattato padding per coerenza */
   font-weight: bold;
   font-size: 1.2rem;
   text-align: left;
   text-decoration: none;
-  color: var(--text);
+  color: var(--text, #333);
 }
+
 
 .project-title a:hover {
   font-style: italic;
-  color: var(--blue);
+  color: var(--blue, #007bff); /* colore bootstrap blue come fallback */
 }
