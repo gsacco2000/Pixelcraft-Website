@@ -14,7 +14,7 @@
   margin-bottom: 2rem;
 }
 
-/* Sezione principale - layout gestito da Bootstrap ma mantiene gap */
+/* Sezione principale - layout gestito da Bootstrap con gap personalizzato */
 .case-study {
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@
   margin-bottom: 4rem;
 }
 
-/* griglia KPI si gestisce con Bootstrap, eventuale CSS per box rimane */
+/* La griglia KPI è gestita da Bootstrap, mantenere qui solo stili per box */
 
 .kpi-box {
   background: var(--background, #f8f9fa);
@@ -96,16 +96,15 @@
 
 /* =============== PORTFOLIO =============== */
 
-/* Rimosso il display grid CSS personalizzato, gestito da Bootstrap ora */
+/* Griglia rimossa perché ora gestita da Bootstrap */
 
-/* Progettazione titoli */
 .project-heading {
   font-size: 2rem;
 }
 
 /* Ogni progetto */
 .project {
-  height: 100%; /* Per estendersi nelle colonne Bootstrap */
+  height: 100%; /* Consente al progetto di estendersi nella colonna Bootstrap */
   opacity: 0;
   transform: translateY(40px) scale(0.94);
   transition: opacity 1s ease, transform 1s ease;
@@ -123,7 +122,7 @@
   border-radius: 0.3rem;
 }
 
-/* Immagine del progetto */
+/* Immagine progetto */
 .project img {
   width: 100%;
   display: block;
