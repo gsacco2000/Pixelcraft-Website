@@ -101,14 +101,18 @@
   <main>
 
     <!-- Hero -->
-    <section class="hero position-relative text-white text-center">
-      <img src="img/img.contact/contact.hero.jpg" class="img-fluid w-100" alt="Foto del duomo di Milano">
-      <div class="hero-content position-absolute top-50 start-50 translate-middle text-shadow">
-        <h1>Contattaci</h1>
-        <p>Hai un progetto in mente o vuoi semplicemente conoscerci meglio?<br>
-          Siamo pronti ad ascoltarti e costruire insieme qualcosa di straordinario.</p>
-      </div>
-    </section>
+  <section class="hero position-relative w-100" style="height: 100vh; background: url('img/img.contact/contact.hero.jpg') center center/cover no-repeat;">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="bg-dark bg-opacity-50 p-5 rounded shadow" style="min-width:300px;">
+      <h1 class="text-white">Contattaci</h1>
+      <p class="text-white">
+        Hai un progetto in mente o vuoi semplicemente conoscerci meglio?<br>
+        Siamo pronti ad ascoltarti e costruire insieme qualcosa di straordinario.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contatti -->
     <div class="container my-5 contatti">
@@ -121,56 +125,54 @@
 
         <!-- Colonna form -->
         <div class="col-md-7 form-contatto">
-          <h2>Scrivici un messaggio</h2>
-          <form action="#" method="post" class="needs-validation" novalidate>
+  <h2>Scrivici un messaggio</h2>
+  <form action="#" method="post" class="needs-validation" novalidate>
+    <div class="mb-3 mt-3 campo form-floating border p-2 rounded">
+      <input type="text" class="form-control" id="nome" name="nome" required placeholder=" ">
+      <label for="nome">Ciao! Come ti chiami? *</label>
+    </div>
 
-            <div class="mb-3 campo form-floating">
-              <input type="text" class="form-control" id="nome" name="nome" required placeholder=" ">
-              <label for="nome">Ciao! Come ti chiami? *</label>
-            </div>
+    <div class="mb-3 mt-3 campo form-floating border p-2 rounded">
+      <select class="form-select" id="oggetto" name="oggetto" required>
+        <option value="" selected disabled>Seleziona</option>
+        <option value="collaborazione">Vi racconto la mia idea</option>
+        <option value="preventivo">Vorrei un preventivo</option>
+        <option value="altro">Altro</option>
+      </select>
+      <label for="oggetto">Cosa ti porta qui? *</label>
+    </div>
 
-            <div class="mb-3 campo form-floating">
-              <select class="form-select" id="oggetto" name="oggetto" required>
-                <option value="" selected disabled>Seleziona</option>
-                <option value="collaborazione">Vi racconto la mia idea</option>
-                <option value="preventivo">Vorrei un preventivo</option>
-                <option value="altro">Altro</option>
-              </select>
-              <label for="oggetto">Cosa ti porta qui? *</label>
-            </div>
+    <div class="mb-3 mt-3 campo form-floating border p-2 rounded">
+      <textarea class="form-control" id="messaggio" name="messaggio" style="height: 150px" required placeholder=" "></textarea>
+      <label for="messaggio">Come possiamo aiutarti? *</label>
+    </div>
 
-            <div class="mb-3 campo form-floating">
-              <textarea class="form-control" id="messaggio" name="messaggio" style="height: 150px" required
-                placeholder=" "></textarea>
-              <label for="messaggio">Come possiamo aiutarti? *</label>
-            </div>
+    <div class="mb-3 mt-3 border p-2 rounded">
+      <label for="file" class="form-label">Allega un file (opzionale)</label>
+      <input type="file" class="form-control" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
+    </div>
 
-            <div class="mb-3">
-              <label for="file" class="form-label">Allega un file (opzionale)</label>
-              <input type="file" class="form-control" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
-            </div>
+    <div class="mb-3 mt-3 campo form-floating border p-2 rounded">
+      <input type="email" class="form-control" id="email" name="email" required placeholder=" ">
+      <label for="email">Qual è la tua email? *</label>
+    </div>
 
-            <div class="mb-3 campo form-floating">
-              <input type="email" class="form-control" id="email" name="email" required placeholder=" ">
-              <label for="email">Qual è la tua email? *</label>
-            </div>
+    <div class="mb-3 mt-3 campo form-floating border p-2 rounded">
+      <input type="tel" class="form-control" id="telefono" name="telefono" placeholder=" ">
+      <label for="telefono">Il tuo numero di telefono (opzionale)</label>
+    </div>
 
-            <div class="mb-3 campo form-floating">
-              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder=" ">
-              <label for="telefono">Il tuo numero di telefono (opzionale)</label>
-            </div>
+    <div class="form-check mb-3 mt-3 border p-2 rounded">
+      <input class="form-check-input" type="checkbox" id="privacy" required>
+      <label class="form-check-label" for="privacy">
+        Ho letto e accetto l’<a href="#">informativa sulla privacy</a> *
+      </label>
+    </div>
 
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" id="privacy" required>
-              <label class="form-check-label" for="privacy">
-                Ho letto e accetto l’<a href="#">informativa sulla privacy</a> *
-              </label>
-            </div>
+    <button class="btn btn-dark mt-3" type="submit">Invia</button>
+  </form>
+</div>
 
-            <button class="btn btn-dark" type="submit">Invia</button>
-          </form>
-        </div>
-      </div>
 
       <!-- Info sedi -->
       <section class="info row text-center mt-5">
