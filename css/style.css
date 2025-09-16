@@ -23,9 +23,6 @@
 /* TEMA SCURO CON CLIC SU ICONA*/
 body.dark {
   --background: #151515;
-  --bg-black-100: #222222;
-  --bg-black-50: #393939;
-  --text-black-900: #ffffff;
   --text: #e9e9e9;
 }
 
@@ -65,7 +62,7 @@ p {
 
 /* HEADER */
 header {
-  background: var(--header);
+  background: var(--skin-color);
   color: var(--text);
   text-align: right;
 }
@@ -83,6 +80,10 @@ i {
   padding-bottom: var(--padding-small);
 }
 
+.icon_nav i{
+  color:white;
+}
+
 
 
 /* NAV */
@@ -97,6 +98,18 @@ nav {
   
 nav img {
   max-height: 30px;
+}
+
+.logo-dark {
+  display: none; /* logo scuro nascosto di default */
+}
+
+body.dark .logo-light {
+  display: none; /* quando tema scuro attivo, nasconde logo light */
+}
+
+body.dark .logo-dark {
+  display: inline; /* mostra logo scuro quando tema scuro attivo */
 }
   
 /* Menu links base (mobile) nascosto, perché menu hamburger */
@@ -142,7 +155,7 @@ nav ul.nav-links li a {
   
 nav ul.nav-links li a:hover,
 nav ul.nav-links li a:focus {
-   color: var(--light_blue);
+   color: var(--skin-color);
 }
   
 
@@ -153,7 +166,7 @@ nav ul.nav-links li a::after {
   left: 50%;
   width: 40%;
   height: 3px;
-  background-color: var(--light_blue);
+  background-color: var(--skin-color);
   transition: width 0.3s ease;
   transform: translateX(-50%);
   width: 0;
@@ -387,7 +400,7 @@ nav ul.nav-links.active ~ .burger-menu {
 
 /* footer */
 .footer {
-  background-color: black;
+  background-color: #151515;
   color: var(--skin-color);
   letter-spacing: 0;
 }

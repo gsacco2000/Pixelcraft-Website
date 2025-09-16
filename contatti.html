@@ -27,27 +27,66 @@
   <!-- CSS personalizzato -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contatti.css">
+
+    <!-- foglio di stile selezionato per change color-->
+  <link rel="stylesheet" href="css/skins/color-1.css" />
+
+  <!-- ====== CAMBIO COLORE DEI TESTI - verranno cambiati con js (adesso sono disabled) ====== -->
+    <link
+      rel="stylesheet"
+      href="css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled/>
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled/>
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled/>
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled/>
+
+
+    <!-- ===== foglio di stile del color switcher - la sezione per il cambio colore ===== -->
+    <link rel="stylesheet" href="css/style-switcher.css" />
 </head>
+
+
 
 <body>
 
   <!-- Header -->
 <header class="fullwidth">
-    <a href="https://www.facebook.com/?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
+    <a class="icon_nav" href="https://www.facebook.com/?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di facebook"><i class="fab fa-facebook"></i></a>
+    <a class="icon_nav" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
+    <a class="icon_nav" href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
 
     <nav class="navbar">
       <a href="home.html">
-        <img src="img/pixelcraft.png" alt="Logo" class="logo" aria-label="Vai alla homepage" >
+        <img src="img/pixelcraft_light.png" alt="Logo" class="logo logo-light" aria-label="Vai alla homepage" >
+        <img src="img/pixelcraft_dark.png" alt="Logo in dark mode" class="logo logo-dark" aria-label="Vai alla homepage" >
       </a>
 
       <ul class="nav-links" aria-label="Menu di navigazione">
-        <li><a href="home.html" aria-label="Vai alla homepage"  class="active">Home</a></li>
+        <li><a href="home.html" aria-label="Vai alla homepage">Home</a></li>
         <li><a href="about.html" aria-label="Vai alla pagina about">About</a></li>
         <li><a href="portfolio.html" aria-label="Vai alla pagina portfolio">Portfolio</a></li>
         <li><a href="journal.html" aria-label="Vai alla pagina journal">Journal</a></li>
-        <li><a href="contatti.html" aria-label="Vai alla pagina contatti">Contatti</a></li>
+        <li><a href="contatti.html" aria-label="Vai alla pagina contatti" class="active">Contatti</a></li>
       </ul>
 
       <button class="burger-menu" aria-label="Apri il menu" onclick="toggleMenu()">
@@ -165,17 +204,18 @@
   </main>
 
   <!-- Footer -->
+<!-- ===== FOOTER ===== -->
   <footer class="footer py-4">
   <div class="container">
     <div class="row align-items-center gy-3">
       <!-- Left -->
       <div class="col-12 col-md-4 text-md-start text-center mb-2 mb-md-0">
         <strong>Pixel Craft</strong>
-        <p class="mb-0 small" style="color: var(--header); margin-top:0.5rem;">P.IVA 12345678901</p>
+        <p class="mb-0 small" style="color: white; margin-top:0.5rem;">P.IVA 12345678901</p>
       </div>
       <!-- Center -->
       <div class="col-12 col-md-4 text-center mb-2 mb-md-0">
-        <p class="mb-0" style="font-size:0.98rem;">© 2025 Pixel Craft. Tutti i diritti riservati.</p>
+        <p class="mb-0" style="font-size:0.98rem; color:white">© 2025 Pixel Craft. Tutti i diritti riservati.</p>
       </div>
       <!-- Right -->
       <div class="col-12 col-md-4 text-md-end text-center">
@@ -195,8 +235,38 @@
   </div>
 </footer>
 
+
+
+<!-- ===== TOOLS PER CAMBIARE COLORE  ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="switcher fas fa-cog"></i> <!-- ===== fa-spin fa ruotare l'icona ===== -->
+      </div>
+
+      <h4>Scegli il tuo colore</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')">Giulia</span>
+        <span class="color-2" onclick="setActiveStyle('color-2')">Jessica</span>
+        <span class="color-3" onclick="setActiveStyle('color-3')">Daisy</span>
+        <span class="color-4" onclick="setActiveStyle('color-4')">Pietro</span>
+      </div>
+
+      <!-- ===== TOGGLE PER CAMBIARE TEMA (chiaro / scuro)  ===== -->
+      <div class=" day-night s-icon">
+        <i class="switcher fas"></i>
+      </div>
+
+    </div>
+
+
+
+
   <!-- Bootstrap JS -->
   <script src="js/script.js"></script>
+
+  <!-- ===== file js per i cambi di stile e del tema ===== -->
+  <script src="js/style-switcher.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>

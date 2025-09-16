@@ -1,80 +1,22 @@
-/* ====== NAVBAR CUSTOM ====== */
-.custom-navbar {
-  position: relative;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: var(--text);
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: var(--nav-bg);
-}
-
-.burger-menu,
-.close-menu {
-  position: absolute;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--text);
-  cursor: pointer;
-  display: none;
-}
-
-@media (max-width: 992px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: var(--background);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-    border: 1px solid #ccc;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .burger-menu,
-  .close-menu {
-    display: block;
-  }
-}
 
 /* ====== CONTATTI CUSTOM ====== */
 
+.titolo h1 {
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+  color: var(--skin-color);
+}
+
 h2 {
-  color: var(--nav-bg);
+  color: var(--skin-color);
+  font-weight: bold;
 }
 
 .contatti {
   padding: var(--padding-large) 0;
 }
 
-.titolo h1 {
-  font-size: 2rem;
-  margin-bottom: 0.9rem;
-}
+
 
 .titolo p {
   font-size: var(--font-p);
@@ -119,24 +61,4 @@ form button:hover {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-
-/* Hero overlay */
-.hero {
-  height: 400px;
-  overflow: hidden;
-}
-
-.hero img {
-  object-fit: cover;
-  height: 100%;
-}
-
-.hero-content {
-  max-width: 700px;
-}
-
-.text-shadow {
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-
 
