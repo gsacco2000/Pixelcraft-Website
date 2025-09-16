@@ -10,11 +10,11 @@
 }
 
 .transparent-box {
-  position: absolute;
+  position: absolute; 
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
-  max-width: 30%;
+  min-width:300px;
   background-color: rgba(87, 86, 86, 0.5); /* sfondo nero trasparente */
   border-radius: 0.5rem;
   padding: 1.5rem;
