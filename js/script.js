@@ -1,3 +1,31 @@
+//   HAMBURGER MENU - home
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggler = document.querySelector('.navbar-toggler');
+  const collapseElem = document.querySelector('#mainNavbar');
+  collapseElem.addEventListener('show.bs.collapse', () => {
+    toggler.classList.add('is-active');
+  });
+  collapseElem.addEventListener('hide.bs.collapse', () => {
+    toggler.classList.remove('is-active');
+  });
+  collapseElem.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const bsCollapse = bootstrap.Collapse.getInstance(collapseElem);
+      if (bsCollapse) bsCollapse.hide();
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
 
 //   SLIDESHOW HOMEPAGE - home
 

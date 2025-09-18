@@ -10,6 +10,7 @@
   <meta name="author" content="Pixel Craft, Pietro Salciarini">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/hamburgers@1.1.3/dist/hamburgers.min.css" rel="stylesheet" />
 
   <link rel="icon" href="img/Pixelcraft_favicon.png" type="image/png">
 
@@ -69,25 +70,23 @@
     <a href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
 
 
-<nav class="navbar navbar-expand-md">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="home.html" aria-label="Homepage" >
-      <img src="img/pixelcraft_light.png" alt="Logo chiaro" class="logo logo-light"/>
-      <img src="img/pixelcraft_dark.png" alt="Logo scuro" class="logo logo-dark" />
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto nav-links">
-        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
-        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-md px-3">
+  <a href="home.html" class="navbar-brand" aria-label="Homepage">
+    <img src="img/pixelcraft_light.png" alt="Logo Chiaro" class="logo logo-light" />
+    <img src="img/pixelcraft_dark.png" alt="Logo Scuro" class="logo logo-dark" />
+  </a>
+  <button class="navbar-toggler hamburger hamburger--spin" type="button" data-bs-toggle="collapse"
+    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav ms-auto nav-links">
+      <li class="nav-item"><a href="home.html" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="journal.html" class="nav-link">Journal</a></li>
+      <li class="nav-item"><a href="contatti.html" class="nav-link">Contatti</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -324,9 +323,7 @@
       <h3>Materie prime e identità locale: un racconto visivo per il Piemonte rurale</h3>
       <p class="info"> MAY 02 2025 | PIETRO SALCIARINI</p>
       <br>
-      <a href="articolo_materieprime.html" class="button" class-label="vai all'articolo Materie Prime">Continua
-        a
-        leggere</a>
+      <a href="articolo_materieprime.html" class="button" class-label="vai all'articolo Materie Prime">Continua a leggere</a>
 
     </div>
 
@@ -492,10 +489,7 @@
 
   <!-- ===== file js per i cambi di stile e del tema ===== -->
   <script src="js/style-switcher.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

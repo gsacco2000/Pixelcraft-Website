@@ -153,6 +153,9 @@ aside {
     border-radius: 0.3rem;
 }
 
+.articolo h3{
+    color:black;
+}
 
 .articolo .button {
     display: inline-block;

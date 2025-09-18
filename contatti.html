@@ -13,6 +13,7 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/hamburgers@1.1.3/dist/hamburgers.min.css" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -75,28 +76,25 @@
     <a class="icon_nav" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di instagram"><i class="fab fa-instagram"></i></a>
     <a class="icon_nav" href="https://www.behance.net/gallery/7755109/Be?locale=it_IT" rel="noopener noreferrer" target="_blank" aria-label="vai al sito di behance"><i class="fab fa-behance"></i></a>
 
-    <nav class="navbar">
-      <a href="home.html">
-        <img src="img/pixelcraft_light.png" alt="Logo" class="logo logo-light" aria-label="Vai alla homepage" >
-        <img src="img/pixelcraft_dark.png" alt="Logo in dark mode" class="logo logo-dark" aria-label="Vai alla homepage" >
-      </a>
-
-      <ul class="nav-links" aria-label="Menu di navigazione">
-        <li><a href="home.html" aria-label="Vai alla homepage">Home</a></li>
-        <li><a href="about.html" aria-label="Vai alla pagina about">About</a></li>
-        <li><a href="portfolio.html" aria-label="Vai alla pagina portfolio">Portfolio</a></li>
-        <li><a href="journal.html" aria-label="Vai alla pagina journal">Journal</a></li>
-        <li><a href="contatti.html" aria-label="Vai alla pagina contatti" class="active">Contatti</a></li>
-      </ul>
-
-      <button class="burger-menu" aria-label="Apri il menu" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <button class="close-menu" aria-label="Chiudi il menu" onclick="toggleMenu()">
-        <i class="fas fa-times"></i>
-      </button>
-    </nav>
+    <nav class="navbar navbar-expand-md px-3">
+  <a href="home.html" class="navbar-brand" aria-label="Homepage">
+    <img src="img/pixelcraft_light.png" alt="Logo Chiaro" class="logo logo-light" />
+    <img src="img/pixelcraft_dark.png" alt="Logo Scuro" class="logo logo-dark" />
+  </a>
+  <button class="navbar-toggler hamburger hamburger--spin" type="button" data-bs-toggle="collapse"
+    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav ms-auto nav-links">
+      <li class="nav-item"><a href="home.html" class="nav-link ">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="journal.html" class="nav-link">Journal</a></li>
+      <li class="nav-item"><a href="contatti.html" class="nav-link active">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
   </header>
   <main>
 
