@@ -2,18 +2,22 @@ main {
     display: block;
 }
 
+h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 main section a {
     padding: 2px;
     border-radius: 0.3rem;
-    letter-spacing: 1px;
-    color: var(--text);
+    letter-spacing: 0.5px;
+    color: var(--skin-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 main section a:hover {
     font-style: italic;
-    color: var(--blue)
 }
 
 .slider {
@@ -40,9 +44,11 @@ article {
     scroll-snap-align: start;
 }
 
-article h2 {
+.titolo_rec {
     font-size: var(--font-p);
     margin: 0.5rem 0;
+    font-weight: bold;
+    color: var(--text);
 }
 
 article a.link {
@@ -82,7 +88,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: white;
+    background: var(--background);
     border-radius: 0.3rem;
     font-size: 1rem;
     padding: 6px;
@@ -97,6 +103,8 @@ aside {
 .category {
     box-sizing: border-box;
     background: #e8e8e8;
+    color: black;
+    font-weight: bold;
     padding: 0.5rem;
     border-radius: 0.3rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -104,19 +112,22 @@ aside {
     cursor: pointer;
 }
 
+.category p {
+    font-size: 0.66rem;
+}
+
 .category:hover {
-    background-color: var(--header);
-    color: var(--text)
+    background-color: var(--skin-color);
+    color: white;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .selezionata {
-    background-color: var(--footer);
-    color: var(--background)
-}
-
-.category p {
-    font-size: 0.66rem;
-    font-weight: 400;
+    background-color: var(--skin-color);
+    color: white;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .tuttiArticoli {
@@ -145,7 +156,9 @@ aside {
 
 .articolo .button {
     display: inline-block;
+    color:white;
     margin-bottom: 8px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     /* spazio sotto il bottone */
 }
 
@@ -168,60 +181,71 @@ aside {
     background-color: #a5c6ff;
     padding: 5px;
     margin-right: 5px;
+    color: black;
 }
 
 .articolo .visual {
     background-color: #ffa5a5;
     padding: 5px;
+    color: black;
 }
 
 .articolo .travel {
     background-color: #afedbe;
     padding: 5px;
     margin-right: 5px;
+    color: black;
 }
 
 .articolo .design {
     background-color: #ffd3a5;
     padding: 5px;
+    color: black;
 }
 
 .articolo .community {
     background-color: #fbf8cc;
     padding: 5px;
+    color: black;
 }
 
 .articolo .graphic {
     background-color: #fad2e1;
     padding: 5px;
+    color: black;
 }
 
 .articolo .sustainability {
     background-color: #c0fdff;
     padding: 5px;
     margin-right: 5px;
+    color: black;
 }
 
 .articolo .territoriale {
     background-color: #e3d5ca;
     padding: 5px;
+    color: black;
 }
 
 .articolo .visual_comm {
     background-color: #d7caea;
     padding: 5px;
     margin-right: 5px;
+    color: black;
 }
 
 .articolo .locale {
     background-color: #bee1e6;
     padding: 5px;
     margin-right: 5px;
+    color: black;
 }
 
 .articolo .spazio {
     background-color: #d0d0d0;
     padding: 5px;
+    color: black;
 }
 
 .btn-journal{
@@ -265,7 +289,6 @@ aside {
         flex: 0 0 calc(100% / 4.5);
         scroll-snap-align: start;
         box-sizing: border-box;
-        background: #f9f9f9;
         padding: 0.5rem;
         border-radius: 0.3rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -274,15 +297,20 @@ aside {
         overflow-x: scroll;
     }
 
+    h3.titolo_rec{
+        color: var(--text);
+    }
+
     aside {
         display: block;
-        background-color: var(--header);
-        padding: 0.5rem;
+        background-color: var(--skin-color);
+        padding: 1rem;
         border-radius: 0.3rem 0 0 0.3rem;
     }
 
     aside h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
     }
 
     .contenutoAside {
@@ -292,7 +320,7 @@ aside {
         max-height: 350px;
         overflow: scroll;
         padding: 0.5rem;
-        color:(--font-text)
+        color: var(--text)
     }
 
     /* Stile per Chrome, Edge, e altri WebKit */
@@ -325,7 +353,7 @@ aside {
     }
 
     .contenutoAsideItem:hover {
-        border-color: var(--background);
+        border-color: white;
         border-radius: 0.3rem;
         cursor: pointer;
     }

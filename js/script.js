@@ -1,29 +1,3 @@
-//    TOGGLE BURGER MENU - home
-
-function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  const burgerMenu = document.querySelector('.burger-menu');
-  const closeMenu = document.querySelector('.close-menu');
-
-  // Aggiungi o rimuovi la classe 'active' per il menu
-  navLinks.classList.toggle('active');
-  
-  // Aggiungi o rimuovi la classe 'open' per l'icona del burger
-  burgerMenu.classList.toggle('open');
-  
-  // Aggiungi o rimuovi la classe 'active' per l'icona di chiusura
-  closeMenu.classList.toggle('active');
-}
-
-
-
-
-
-
-
-
-
-
 
 //   SLIDESHOW HOMEPAGE - home
 

@@ -86,171 +86,96 @@ i {
 
 
 
-/* NAV */
+/* Navbar base */
 nav {
- background: var(--background);
-  padding: var(--padding-medium);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  }
-  
-nav img {
-  max-height: 30px;
-}
-
-.logo-dark {
-  display: none; /* logo scuro nascosto di default */
-}
-
-body.dark .logo-light {
-  display: none; /* quando tema scuro attivo, nasconde logo light */
-}
-
-body.dark .logo-dark {
-  display: inline; /* mostra logo scuro quando tema scuro attivo */
-}
-  
-/* Menu links base (mobile) nascosto, perché menu hamburger */
-nav ul.nav-links {
-  display: none;
-  flex-direction: column;
-  list-style: none; /* Togli i pallini */
-  position: absolute;
-  top: 60px; /* sotto la navbar */
-  right: 0;
-  left: 0;
   background: var(--background);
-  width: 100%;
-  padding: 1rem 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  z-index: 1000;
-  
-/* Centrare verticale e orizzontale le voci */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: var(--padding-medium);
+  font-family: var(--font-family);
+  position: relative;
 }
 
-nav ul.nav-links.active {
-  display: flex;
+.logo{
+  width:4rem;
 }
-  
-nav ul.nav-links li {
-  margin: 0.5rem 0;
-  width: 100%;
+
+/* Logo gestione chiaro / scuro */
+.logo-light { display: inline; }
+.logo-dark { display: none; }
+body.dark .logo-light { display: none; }
+body.dark .logo-dark { display: inline; }
+
+/* Nav Bootstrap + custom */
+.navbar-nav.nav-links {
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-start;
+  padding-left: 0;
+  margin: 0;
 }
-  
-nav ul.nav-links li a {
+
+@media (min-width: 768px) {
+  .navbar-nav.nav-links {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+
+/* Link nav */
+.navbar-nav.nav-links .nav-link {
   color: var(--text);
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: 700;
   font-size: var(--font-p);
-  padding: 5px 0;
-  display: block;
-  position: relative; /* per ::after */
-  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s;
 }
-  
-nav ul.nav-links li a:hover,
-nav ul.nav-links li a:focus {
-   color: var(--skin-color);
-}
-  
 
-nav ul.nav-links li a::after {
+/* Hover / focus link */
+.navbar-nav.nav-links .nav-link:hover,
+.navbar-nav.nav-links .nav-link:focus {
+  color: var(--skin-color);
+}
+
+/* Linea sottolineata base invisibile */
+.navbar-nav.nav-links .nav-link::after {
   content: "";
   position: absolute;
-  bottom: 2px;
+  bottom: 0.2em;
   left: 50%;
-  width: 40%;
+  width: 0;
   height: 3px;
   background-color: var(--skin-color);
-  transition: width 0.3s ease;
+  transition: width 0.3s;
   transform: translateX(-50%);
-  width: 0;
-
+  border-radius: 1.5px;
 }
 
-nav ul.nav-links li a:hover::after,
-nav ul.nav-links li a:focus::after,
-nav ul.nav-links li a.active::after {
+/* Linea visibile mobile */
+.navbar-nav.nav-links .nav-link:hover::after,
+.navbar-nav.nav-links .nav-link:focus::after,
+.navbar-nav.nav-links .nav-link.active::after {
   width: 40%;
 }
-  
-/* Icone hamburger e close visibili di base (mobile) */
-.burger-menu, .close-menu {
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--text);
-  display: block;
-  background: none;
-  border: none;
-  transition: opacity 0.3s ease;
-      }
-  
-nav ul.nav-links.active ~ .burger-menu {
-  display: none !important;
-  opacity: 0;
-}
-  
-/* Close icon nascosto di base (mobile) */
-.close-menu {
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 1100;
-}
-  
 
-/* Quando menu attivo, mostra close */
-  nav ul.nav-links.active ~ .close-menu {
-  display: block;
-}
-  
+/* Linea visibile desktop (più lunga) */
 @media (min-width: 768px) {
-  nav ul.nav-links {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    gap: 1rem;
-    width: auto;
-    box-shadow: none;
-    padding: 0;
-    justify-content: flex-end;
-    list-style: none; /* Togli i pallini anche su desktop */
-  }
-  
-/* Nascondi hamburger e close-menu */
-  .burger-menu, .close-menu {
-    display: none !important;
-    }
-  
-/* Link stile desktop */
-  nav ul.nav-links li a {
-    position: relative;
-    padding: 5px 0;
-  }
-  
-/* Desktop: linea piena larga al 100%, posizionata a bottom 0, left 0 */
-  nav ul.nav-links li a::after {
-    left: 0;
-    width: 0;
-    transform: none;
-    transition: width 0.3s ease;
-  }
-  nav ul.nav-links li a:hover::after,
-  nav ul.nav-links li a:focus::after,
-  nav ul.nav-links li a.active::after {
-    width: 100%;
-  }
-  
-  nav ul.nav-links li {
-    margin: 0; /* azzera margini su desktop */
+  .navbar-nav.nav-links .nav-link:hover::after,
+  .navbar-nav.nav-links .nav-link:focus::after,
+  .navbar-nav.nav-links .nav-link.active::after {
+    width: 75%;
   }
 }
+
+
+
+
+
+
+
+
 
 
 
