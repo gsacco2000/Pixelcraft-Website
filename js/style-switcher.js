@@ -1,46 +1,89 @@
-/* ========================== CAMBIO COLORE =========================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');
+  const styleSwitcher = document.querySelector('.style-switcher');
+  const colorButtons = document.querySelectorAll('.colors span');
+  const dayNight = document.querySelector('.day-night');
 
-//potevo usare getElementbyClass
-const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');   // seleziona l'elemento toggler (rotella) per aprire e chiudere lo switcher
+  function applyTheme(colorClass) {
+    document.body.classList.remove('blue', 'beige', 'lilac', 'green');
+    document.body.classList.add(colorClass);
+  }
 
-styleSwitcherToggle.addEventListener('click', () => {                            // evento listener che ascolta l'evento click sul toggler
-  
-  document.querySelector('.style-switcher').classList.toggle('open');            // con ogni click, cambia classe di elemento con .style-switcher
-});                                                                              // (mostra o nasconde il pannello delle opzioni di stile) 
-
-
-//gestisce il cambio colore
-const alternateStyles = document.querySelectorAll('.alternate-style');            // seleziona TUTTI gli elementi con classe .alternate-style
-
-//func che cambia il tema selezionato - setActiveStyle è definita in html
-function setActiveStyle(color) {                                                  //func riceve parametro color (tema selezionato) - color definito in fuction
-  alternateStyles.forEach((style) => {                                            //per ogni elemento con quella classe .alternate-style
-    if (color === style.getAttribute('title')) {                                  //se il nome del tema, preso da attr title, corrisponde al colore passato dalla funzione
-      style.removeAttribute('disabled');                                          //viene rimosso disable, e lo stile viene attivato
+  function applyDarkMode(isDark) {
+    const icon = dayNight.querySelector('i');
+    if (isDark) {
+      document.body.classList.add('dark');
+      icon.classList.add('fa-sun');
+      icon.classList.remove('fa-moon');
     } else {
-      style.setAttribute('disabled', 'true');                                     //altrimenti disabilita il tema
+      document.body.classList.remove('dark');
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  }
+
+  const savedTheme = localStorage.getItem('themeColor');
+  const savedDarkMode = localStorage.getItem('themeMode');
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  }
+  if (savedDarkMode === 'dark') {
+    applyDarkMode(true);
+  } else {
+    applyDarkMode(false);
+  }
+
+  // Aggiorna logo iniziale in base ai valori salvati
+  updateLogo(savedTheme || 'blue', savedDarkMode === 'dark');
+
+  styleSwitcherToggle.addEventListener('click', () => {
+    styleSwitcher.classList.toggle('open');
+  });
+
+  colorButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mapClass = {
+        'color-1': 'blue',
+        'color-2': 'beige',
+        'color-3': 'lilac',
+        'color-4': 'green',
+      };
+      const colorClass = mapClass[btn.classList[0]];
+      applyTheme(colorClass);
+      localStorage.setItem('themeColor', colorClass);
+      styleSwitcher.classList.remove('open');
+      // Chiama updateLogo dopo cambio colore, passa tema scuro/chiaro attuale
+      updateLogo(colorClass, document.body.classList.contains('dark'));
+    });
+  });
+
+  dayNight.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    const icon = dayNight.querySelector('i');
+    if (isDark) {
+      icon.classList.add('fa-sun');
+      icon.classList.remove('fa-moon');
+      localStorage.setItem('themeMode', 'dark');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+      localStorage.setItem('themeMode', 'light');
+    }
+    // Chiama updateLogo dopo toggle dark/light
+    const currentColor = localStorage.getItem('themeColor') || 'blue';
+    updateLogo(currentColor, isDark);
+  });
+});
+
+// Funzione updateLogo per mostrare il logo giusto
+function updateLogo(colorClass, isDark) {
+  const logos = document.querySelectorAll('a.navbar-brand .logo');
+  logos.forEach(logo => logo.classList.remove('active'));
+  const modeClass = isDark ? 'logo-dark' : 'logo-light';
+  logos.forEach(logo => {
+    if (logo.classList.contains(modeClass) && logo.classList.contains('logo-' + colorClass)) {
+      logo.classList.add('active');
     }
   });
 }
-
-
-
-/* ========================== CAMBIO STILE MODALITÀ CHIARA O SCURA, con icone =========================== */
-
-const dayNight = document.querySelector('.day-night');                           //viene selezioanto l'elemento con classe .day-night - toggle per cambiare tema
-
-dayNight.addEventListener('click', () => {                                       //ascolta l'evento click su elemento dayNight
-  dayNight.querySelector('i').classList.toggle('fa-sun');                        //funzione che alterna le icone sole e luna
-  dayNight.querySelector('i').classList.toggle('fa-moon');                       //funzione toggle cambia classe - se è presente, viene rimossa, se non è presente, viene aggiunta
-  document.body.classList.toggle('dark');                                        //aggiunta o rimossa la classe dark alla pagina, a seconda di questo lo stile sarà chiaro o scuro 
-//toggle - metodo js (add classe se non c'è, la toglie se c'è)
-});
-
-/* === impostare icona iniziale in base alla modalità === */ 
-window.addEventListener('load', () => {                                         //quando la pagina viene caricata - con window, mi appoggio a tutta la pagina - ascolta evento load (funzione eseguita solo quando pagina è caricata)
-  if (document.body.classList.contains('dark')) {                               //viene verificato se il documento ha la classe dark
-    dayNight.querySelector('i').classList.add('fa-sun');                        //se è presente, diventa un sole (perchè e mod scura -> chiara)
-  } else {
-    dayNight.querySelector('i').classList.add('fa-moon');                       //se non presente, diventa una luna (perchè è mod chiara -> scura)
-  }
-});

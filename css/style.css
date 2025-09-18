@@ -20,10 +20,24 @@
 }
 
 
-/* TEMA SCURO CON CLIC SU ICONA*/
+/* TEMA SCURO CON CLIC SU ICONA */
 body.dark {
   --background: #151515;
   --text: #e9e9e9;
+}
+
+/* TEMA BEIGE CON CLIC SU ICONA */
+body.blue {
+  --skin-color: #0085CC;
+}
+body.beige {
+  --skin-color: #D5A490;
+}
+body.lilac {
+  --skin-color: #C99BE2;
+}
+body.green {
+  --skin-color: #90B791;
 }
 
 
@@ -94,15 +108,16 @@ nav {
   position: relative;
 }
 
-.logo{
-  width:4rem;
+.logo {
+  width: 4rem;
+  display: none; /* Nascondi tutti di default */
 }
 
-/* Logo gestione chiaro / scuro */
-.logo-light { display: inline; }
-.logo-dark { display: none; }
-body.dark .logo-light { display: none; }
-body.dark .logo-dark { display: inline; }
+/* Mostra solo il logo attivo */
+.logo.active {
+  display: inline-block !important;
+  width: 4rem !important;
+}
 
 
   .navbar-nav.nav-links {
