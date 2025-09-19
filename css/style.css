@@ -250,7 +250,7 @@ nav {
 
 
 
-/* === HERO MOBILE-FIRST === */
+/* === HERO - slideshow con blur text === */
 .hero {
   display: grid;
   grid-template-columns: 1fr;
