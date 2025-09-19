@@ -157,7 +157,7 @@ nav {
       display: block !important;
     }
     .navbar-nav.nav-links .nav-link.active::after {
-      width: 40%;
+      width: 60%;
     }
   }
   /* Linea desktop */
