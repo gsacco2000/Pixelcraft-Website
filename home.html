@@ -75,22 +75,46 @@
   <main>
 
 <!-- ===== CAROSELLO - slideshow con text in blur ===== -->
-    <section class="hero">
-      <div class="slideshow">
-        <img src="img/img.home/home.caffe.jpg" class="slide active" alt="Caff&egrave; Slide">
-        <img src="img/img.home/home.magazine.jpg" class="slide" alt="Magazine Slide">
-        <img src="img/img.home/home.opensound.jpg" class="slide" alt="OpenSound Slide">
-        <img src="img/img.home/home.primapower.jpg" class="slide" alt="PrimaPower Slide">
-        <img src="img/img.home/home.shampoo.jpg" class="slide" alt="Branding Shampoo Slide">
+      <section class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/img.home/home.beer.png" alt="Caffè Slide" />
+          <div class="carousel-caption custom-blur-caption">
+            <h1>Costruiamo esperienze che </br> <span id="linea_curva">lasciano il segno</span></h1>
+            <p>
+              Pixelcraft è l’agenzia di comunicazione che trasforma idee in strategie visive vincenti.
+              Dal branding al digital marketing, diamo forma alla tua identità con creatività, precisione e passione.
+            </p>
+            <a class="button btn btn-primary" href="about.html" aria-label="vai alla pagina about">Conoscici</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/img.home/home.caffe.jpg" alt="Magazine Slide" />
+          <div class="carousel-caption custom-blur-caption">
+            <h1>Riviste e Cultura: Un Nuovo Sguardo</h1>
+            <p>Scopri i nostri progetti editoriali, capaci di raccontare storie con stile e originalità, valorizzando ogni dettaglio.</p>
+            <a class="button btn btn-primary" href="magazine.html">Esplora le Riviste</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/img.home/home.shampoo.jpg" alt="OpenSound Slide" />
+          <div class="carousel-caption custom-blur-caption">
+            <h1>OpenSound: Il Suono della Creatività</h1>
+            <p>Innoviamo il mondo audio con strategie digitali e produzioni su misura per ogni esigenza sonora.</p>
+            <a class="button btn btn-primary" href="opensound.html">Ascolta Ora</a>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-content">
-        <h1>Costruiamo esperienze che <span id="linea_curva">lasciano il segno</span></h1>
-        <p>Pixelcraft &egrave; l&rsquo;agenzia di comunicazione che trasforma idee in strategie visive vincenti.
-          Dal branding al digital marketing, diamo forma alla tua identit&agrave; con creativit&agrave;, precisione e passione.</p>
-        <a class="button" href="about.html" aria-label="vai alla pagina about">Conoscici</a>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-    </section>
+    </div>
+  </section>
 
 
 

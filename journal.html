@@ -71,16 +71,15 @@
     
   </header>
 
-  <section class="hero">
+      <section class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
-    <div class="slideshow">
-      <img src="img/img.journal/journalArticolo_graficaFiliere.png" class="slide active"
-        alt="persone che fanno brainstorming su un grande foglio pieno di scritte">
-    </div>
-
-    <div class="hero-content">
-      <h1>Journal</h1>
-      <p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/img.journal/journalarticolo_graficafiliere.png" alt="persone che fanno brainstorming" />
+          <div class="carousel-caption custom-blur-caption">
+            <h1>Journal</span></h1>
+                      <p>
         Idee, ispirazioni e approfondimenti: il nostro blog è uno spazio dove condividiamo pensieri, esperienze e
         visioni sul mondo della comunicazione visiva e oltre.
         Qui raccontiamo storie di progetti, riflessioni sui trend emergenti e consigli pratici per affrontare le sfide
@@ -92,9 +91,20 @@
         appassionano e ci guidano nel nostro lavoro quotidiano.
         Un luogo di confronto e scoperta, pensato per chi vuole restare in movimento insieme a noi.
       </p>
-    </div>
+            <a class="button btn btn-primary" href="about.html" aria-label="vai alla pagina about">Conoscici</a>
+          </div>
 
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
   </section>
+
+
+
+
 
   <main>
 

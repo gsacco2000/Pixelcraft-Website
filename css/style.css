@@ -243,76 +243,143 @@ nav {
 
 
 
-
-
-
-
-
-
-
+/* === HERO - slideshow con blur text === */
 /* === HERO - slideshow con blur text === */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr;
+  height: 80vh;
   position: relative;
-  width: 100%;
-  height: 87vh;
-  overflow: hidden;
 }
 
-.slideshow {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  position: absolute;
-  width: 100%;
+#heroCarousel {
   height: 100%;
-  z-index: 0;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
+.carousel-inner {
   height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
-.slide.active {
-  opacity: 1;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* da center a flex-start */
-  text-align: left;        /* da center a left */
-  gap: 1rem;
-  padding: 40px 30px;
-  background-color: rgba(0, 0, 0, 0.2);
+/* Caption overlay con blur, sopra l’immagine */
+.carousel-caption.custom-blur-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 2rem;
+  right: 2rem;
+  max-width: 60vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 0.5rem;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   color: white;
-  z-index: 1;
+  text-align: left;
+  z-index: 5;
 }
 
-/* Desktop layout: 2 colonne */
-@media (min-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr 1fr;
-  }
+.custom-blur-caption h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-  .hero-content {
-    grid-column: 2;
-    grid-row: 1 / -1;
-    align-self: center;
-    justify-self: end;
-    width: 100%;
-    height: auto;
-    padding: 80px 60px;
+.custom-blur-caption p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.button {
+  min-width: 200px;
+}
+
+/* Frecce centrali verticalmente */
+.carousel-control-prev, .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  opacity: 0.75;
+}
+
+/* Indicatori sopra immagine, subito sotto la caption */
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  width: auto;
+  left: 2rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+  justify-content: flex-start;
+}
+
+.carousel-indicators button {
+  width: 30px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #ffffffb3;
+  opacity: 0.5;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
+  background-color: var(--skin-color);
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .carousel-caption.custom-blur-caption {
+    position: absolute;
+    bottom: 12%;
+    left: 1rem;
+    right: 1rem;
+    max-width: 90vw;
+    padding: 1rem 1rem 1.5rem 1rem;
+    max-height: none;
+    overflow: visible;
+  }
+  .custom-blur-caption h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  .custom-blur-caption p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+  .button {
+    min-width: 120px;
+    font-size: 0.8rem;
+  }
+  .carousel-indicators {
+    bottom: 20px;
+    left: 1rem;
+    right: 1rem;
+    gap: 0.3rem;
+    justify-content: center;
+  }
+  .carousel-indicators button {
+    width: 18px;
+    height: 5px;
   }
 }
+
+
+
+
+
+
 
 
 /* BOTTONE GENERICO */

@@ -77,18 +77,33 @@
   </header>
   <main>
 
-    <!-- Hero -->
-  <section class="hero position-relative w-100" style="height: 100vh; background: url('img/img.contact/contact.hero.jpg') center center/cover no-repeat;">
-  <div class="d-flex justify-content-center align-items-center h-100">
-    <div class="bg-dark bg-opacity-50 p-5 rounded shadow" style="min-width:300px;">
-      <h1 class="text-white">Contattaci</h1>
-      <p class="text-white">
-        Hai un progetto in mente o vuoi semplicemente conoscerci meglio?<br>
-        Siamo pronti ad ascoltarti e costruire insieme qualcosa di straordinario.
-      </p>
+
+<!-- ===== CAROSELLO - slideshow con text in blur ===== -->
+      <section class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/img.contact/contact.hero.jpg" alt="persone che fanno brainstorming" />
+          <div class="carousel-caption custom-blur-caption">
+            <h1>Contattaci</h1>
+                <p class="text-white">
+                  Hai un progetto in mente o vuoi semplicemente conoscerci meglio?<br>
+                  Siamo pronti ad ascoltarti e costruire insieme qualcosa di straordinario.
+                </p>
+            <a class="button btn btn-primary" href="portfolio.html" aria-label="vai alla pagina about">Scopri i nostri lavori</a>
+          </div>
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+
+
 
 
     <!-- Contatti -->

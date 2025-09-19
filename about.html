@@ -74,17 +74,33 @@
 
   </header>
 
-  <!-- HERO -->
-<section class="hero text-white d-flex align-items-center position-relative">
-  <div class="transparent-box p-4">
-    <h1 class="display-4 fw-bold">About us</h1>
-    <p class="lead">Siamo i ragazzi di PixelCraft. Agenzia creativa fondata da Daisy Romaniello, Giulia Sacco,
-      Pietro Salciarini e Jessica Scano. Attivi da 15 anni in Italia e all’estero con esperienza in industria
-      meccanica di precisione, aerospaziale, metalmeccanica ed edile.</p>
-    <p>Un team composto da project manager, copywriter, social media manager, art director, graphic designer,
-      sviluppatori web, foto-videomaker e event producer.</p>
-  </div>
-</section>
+<!-- ===== CAROSELLO - slideshow con text in blur ===== -->
+      <section class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/img.about/about.hero.jpg" alt="persone che fanno brainstorming" />
+          <div class="carousel-caption custom-blur-caption">
+            <h1>About us</span></h1>
+                <p class="lead">Siamo i ragazzi di PixelCraft. Agenzia creativa fondata da Daisy Romaniello, Giulia Sacco,
+                  Pietro Salciarini e Jessica Scano. Attivi da 15 anni in Italia e all’estero con esperienza in industria
+                  meccanica di precisione, aerospaziale, metalmeccanica ed edile.</p>
+                <p>Un team composto da project manager, copywriter, social media manager, art director, graphic designer,
+                  sviluppatori web, foto-videomaker e event producer.</p>
+            <a class="button btn btn-primary" href="portfolio.html" aria-label="vai alla pagina about">Scopri i nostri lavori</a>
+          </div>
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+
+
 
 
   <!-- TEAM -->
