@@ -99,7 +99,6 @@ i {
 }
 
 
-
 /* Navbar base */
 nav {
   background: var(--background);
@@ -118,7 +117,6 @@ nav {
   display: inline-block !important;
   width: 4rem !important;
 }
-
 
   .navbar-nav.nav-links {
     flex-direction: column;
@@ -241,9 +239,6 @@ nav {
 }
 
 
-
-
-/* === HERO - slideshow con blur text === */
 /* === HERO - slideshow con blur text === */
 .hero {
   height: 80vh;
