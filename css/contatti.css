@@ -1,0 +1,64 @@
+
+/* ====== CONTATTI CUSTOM ====== */
+
+.titolo h1 {
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+  color: var(--skin-color);
+}
+
+h2 {
+  color: var(--skin-color);
+  font-weight: bold;
+}
+
+.contatti {
+  padding: var(--padding-large) 0;
+}
+
+
+
+.titolo p {
+  font-size: var(--font-p);
+  margin-bottom: 0.9rem;
+}
+
+/* Form */
+.form-contatto h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: #666;
+}
+
+.checkbox-container a,
+.blocco a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+form button {
+  background-color: var(--text);
+  color: var(--background);
+  border: none;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* Info sedi */
+.info h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mappa */
+.mappa h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+

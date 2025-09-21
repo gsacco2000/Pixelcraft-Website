@@ -1,0 +1,87 @@
+.transparent-box {
+  position: absolute; 
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  min-width:300px;
+  background-color: rgba(87, 86, 86, 0.5); /* sfondo nero trasparente */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+
+/* immagini team: riempiono il lato e mantengono object-fit */
+.img-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blocco colorato (centrato) */
+.color-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--background);
+}
+
+/* colori originali preservati */
+.color1, .color2, .color3, .color4 { background-color: var(--skin-color); }
+
+/* titoli blocco */
+.color-block h2 {
+  font-size: 1.7rem;
+  margin-bottom: .5rem;
+}
+
+/* icone social nel blocco */
+.social-icons {
+  margin-top: .75rem;
+  display: inline-flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  font-size: 1.35rem;
+  color: var(--background);
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+/* RESPONSIVE: su md+ facciamo i blocchi quadrati (aspect-ratio) e assicuriamo che le colonne si estendano in altezza */
+@media (min-width: 768px) {
+  .team-row {
+    align-items: stretch;
+  }
+
+  /* rendi le colonne 1:1 (quadrate) su md+ */
+  .team-row > .col-md-6 {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* assicura che il contenuto color-block sia centrato verticalmente */
+  .team-row > .col-md-6 .color-block {
+    padding: var(--padding-medium);
+  }
+}
+
+/* Mobile: spaziatura tra elementi */
+@media (max-width: 767.98px) {
+  .team-row + .team-row {
+    margin-top: 1rem;
+  }
+}
+
+/* piccole transizioni generali */
+.img-cover, .color-block {
+  transition: all .15s ease;
+}
+

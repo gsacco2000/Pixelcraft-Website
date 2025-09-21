@@ -1,0 +1,23 @@
+{
+  "name": "pixelcraft-website",
+  "version": "1.0.0",
+  "description": "Sito web dell'agenzia di comunicazione Pixelcraft. Proprietà di Giulia, Daisy, Pietro, Jessica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsacco2000/Pixelcraft-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsacco2000/Pixelcraft-Website/issues"
+  },
+  "homepage": "https://github.com/gsacco2000/Pixelcraft-Website#readme",
+  "dependencies": {
+    "vue": "^3.5.21"
+  }
+}
